@@ -10,7 +10,7 @@ type Work = {
 export const worksData: Work[] = [
     {
         logo: (
-            <PurritoGeneralLogo className="text-zinc-50 dark:text-zinc-50 w-[196px] z-10" />
+            <PurritoGeneralLogo className="text-zinc-50 dark:text-zinc-50 w-[196px]" />
         ),
         thumbUrl: "/works/purritogeneral/purrito-raining-coins.png",
         thumbAlt: "purrito raining coins",
