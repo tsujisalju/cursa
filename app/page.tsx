@@ -11,14 +11,17 @@ export default function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setWipePhase("in");
-        }, 10000);
+        }, 5000);
         return () => clearInterval(interval);
     }, []);
 
-    const handleTransitionEnd = () => {
+    const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
+        if (e.propertyName !== "translate") return;
         if (wipePhase === "in") {
             setCurrentIndex((prev) => (prev + 1) % homeGallery.length);
-            setWipePhase("out");
+            setTimeout(() => {
+                setWipePhase("out");
+            }, 500);
         }
         if (wipePhase === "out") {
             setWipePhase("idle");
@@ -38,9 +41,9 @@ export default function Home() {
             </h1>
             <div
                 className={`absolute top-0 left-0 w-full h-full ${homeGallery[currentIndex].wipeColor} transition ease-out
-                  ${wipePhase === "idle" ? "duration-0 translate-x-[-100%]" : ""}
-                  ${wipePhase === "in" ? "duration-400 translate-x-[0%]" : ""}
-                  ${wipePhase === "out" ? "duration-400 translate-x-[100%]" : ""}
+                  ${wipePhase === "idle" ? "duration-0 translate-x-[-100%]" : "duration-400"}
+                  ${wipePhase === "in" ? "translate-x-[0%]" : ""}
+                  ${wipePhase === "out" ? "translate-x-[100%]" : ""}
                   `}
                 onTransitionEnd={handleTransitionEnd}
             ></div>
