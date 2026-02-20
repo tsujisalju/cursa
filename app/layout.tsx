@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./header";
+import Footer from "./footer";
 
 const aileron = localFont({
     variable: "--font-aileron",
@@ -15,6 +16,11 @@ const aileron = localFont({
             path: "./fonts/Aileron-Bold.otf",
             weight: "700",
             style: "bold",
+        },
+        {
+            path: "./fonts/Aileron-Black.otf",
+            weight: "900",
+            style: "black",
         },
         {
             path: "./fonts/Aileron-Italic.otf",
@@ -65,6 +71,22 @@ const cooper = localFont({
     ],
 });
 
+const flareserif = localFont({
+    variable: "--font-flareserif",
+    src: [
+        {
+            path: "./fonts/Flareserif-821-Regular.otf",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "./fonts/Flareserif-821-Bold.otf",
+            weight: "700",
+            style: "bold",
+        },
+    ],
+});
+
 export const metadata: Metadata = {
     title: "Tsujisalju",
     description: "Freelance Developer and Designer",
@@ -78,11 +100,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${aileron.variable} ${cooper.variable} antialiased`}
+                className={`${aileron.variable} ${cooper.variable} ${flareserif.variable} antialiased`}
             >
-                <div className="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-900">
+                <div className="flex flex-col h-screen">
                     <Header />
-                    {children}
+                    <div className="flex grow rounded-lg overflow-hidden">
+                        {children}
+                    </div>
+                    <Footer />
                 </div>
             </body>
         </html>
