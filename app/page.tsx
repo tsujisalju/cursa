@@ -35,6 +35,7 @@ export default function Home() {
                 alt={homeGallery[currentIndex].title}
                 fill
                 className={`object-cover transition duration-400 ${homeGallery[currentIndex].className} ${wipePhase === "in" ? "blur-sm" : "blur-none"}`}
+                loading={"eager"}
             />
             <h1 className="absolute top-4 lg:bottom-4 left-4 font-sans font-bold text-lg lg:text-2xl mix-blend-difference text-white">
                 {homeGallery[currentIndex].title}
