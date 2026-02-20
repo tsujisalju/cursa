@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setWipePhase("in");
-        }, 5000);
+        }, 10000);
         return () => clearInterval(interval);
     }, []);
 
@@ -21,7 +21,7 @@ export default function Home() {
             setCurrentIndex((prev) => (prev + 1) % homeGallery.length);
             setTimeout(() => {
                 setWipePhase("out");
-            }, 500);
+            }, 1000);
         }
         if (wipePhase === "out") {
             setWipePhase("idle");
