@@ -1,12 +1,13 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import { homeGallery } from "@/lib/home-gallery";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
-    const [wipePhase, setWipePhase] = useState<"idle" | "in" | "out">("idle");
+    const [wipePhase, setWipePhase] = useState<"idle" | "in" | "out">("in");
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -44,6 +45,16 @@ export default function Home() {
             <h1 className="absolute top-4 lg:bottom-4 left-4 font-sans font-bold text-lg lg:text-2xl mix-blend-difference text-white">
                 {homeGallery[currentIndex].title}
             </h1>
+            <div className="absolute top-4 right-4 flex flex-row space-x-2">
+                {homeGallery[currentIndex].tags.map((tag) => (
+                    <Badge
+                        key={tag}
+                        className="font-sans uppercase mix-blend-difference"
+                    >
+                        {tag}
+                    </Badge>
+                ))}
+            </div>
             <div
                 className={`absolute top-0 left-0 w-full h-full ${homeGallery[currentIndex].wipeColor} transition ease-out
                   ${wipePhase === "idle" ? "duration-0 -translate-x-full" : "duration-400"}
