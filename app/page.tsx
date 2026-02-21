@@ -13,18 +13,21 @@ export default function Home() {
             setWipePhase("in");
         }, 10000);
         return () => clearInterval(interval);
-    }, []);
+    }, [currentIndex]);
 
     const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
         if (e.propertyName !== "translate") return;
         if (wipePhase === "in") {
             setCurrentIndex((prev) => (prev + 1) % homeGallery.length);
-            setTimeout(() => {
-                setWipePhase("out");
-            }, 1000);
         }
         if (wipePhase === "out") {
             setWipePhase("idle");
+        }
+    };
+
+    const handleImageLoad = () => {
+        if (wipePhase === "in") {
+            setWipePhase("out");
         }
     };
 
@@ -36,15 +39,16 @@ export default function Home() {
                 fill
                 className={`object-cover transition duration-400 ${homeGallery[currentIndex].className} ${wipePhase === "in" ? "blur-sm" : "blur-none"}`}
                 loading={"eager"}
+                onLoad={handleImageLoad}
             />
             <h1 className="absolute top-4 lg:bottom-4 left-4 font-sans font-bold text-lg lg:text-2xl mix-blend-difference text-white">
                 {homeGallery[currentIndex].title}
             </h1>
             <div
                 className={`absolute top-0 left-0 w-full h-full ${homeGallery[currentIndex].wipeColor} transition ease-out
-                  ${wipePhase === "idle" ? "duration-0 translate-x-[-100%]" : "duration-400"}
+                  ${wipePhase === "idle" ? "duration-0 -translate-x-full" : "duration-400"}
                   ${wipePhase === "in" ? "translate-x-[0%]" : ""}
-                  ${wipePhase === "out" ? "translate-x-[100%]" : ""}
+                  ${wipePhase === "out" ? "translate-x-full" : ""}
                   `}
                 onTransitionEnd={handleTransitionEnd}
             ></div>
