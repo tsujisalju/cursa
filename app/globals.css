@@ -8,9 +8,11 @@
     --animate-marquee: marquee 90s linear infinite;
     @keyframes marquee {
         0% {
-            transform: translateX(0);
+            transform: translateY(0);
+            transform: translateX(0%);
         }
         100% {
+            transform: translateY(0);
             transform: translateX(-100%);
         }
     }
@@ -18,10 +20,36 @@
     --animate-marquee-2: marquee-2 90s linear infinite;
     @keyframes marquee-2 {
         0% {
+            transform: translateY(0);
             transform: translateX(100%);
         }
         100% {
+            transform: translateY(0);
             transform: translateX(0%);
+        }
+    }
+
+    --animate-marquee-vertical: marquee-vertical 90s linear infinite;
+    @keyframes marquee-vertical {
+        0% {
+            transform: translateX(0);
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateX(0);
+            transform: translateY(100%);
+        }
+    }
+
+    --animate-marquee-vertical2: marquee-vertical2 90s linear infinite;
+    @keyframes marquee-vertical2 {
+        0% {
+            transform: translateX(0);
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateX(0);
+            transform: translateY(0%);
         }
     }
 }

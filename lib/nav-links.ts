@@ -1,6 +1,6 @@
 export const navLinks = [
-    { label: "Works", href: "#" },
-    { label: "Personal", href: "#" },
-    { label: "Almanac", href: "#" },
-    { label: "Logs", href: "#" },
+  { label: "Works", href: "/works" },
+  { label: "Personal", href: "/personal" },
+  { label: "Almanac", href: "/almanac" },
+  { label: "Logs", href: "/logs" },
 ];
