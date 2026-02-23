@@ -26,11 +26,6 @@ export default function TransitionLink({
     e.preventDefault();
     const direction = getTransitionDirection(href);
 
-    console.log("Transition:", {
-      href,
-      direction,
-      targetIndex: getPageIndex(href),
-    });
     // No transition if navigating to the same page
     if (direction === "none") {
       return;
@@ -65,7 +60,6 @@ export default function TransitionLink({
       "--transition-new-animation",
       newAnimation,
     );
-    console.log("Set CSS variables:", { oldAnimation, newAnimation });
 
     // Use View Transitions API
     const transition = document.startViewTransition(() => {
@@ -76,7 +70,6 @@ export default function TransitionLink({
 
     // Clean up CSS custom properties after transition completes
     transition.finished.finally(() => {
-      console.log("Transition finished, cleaning up");
       document.documentElement.style.removeProperty(
         "--transition-old-animation",
       );
