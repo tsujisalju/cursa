@@ -1,7 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { homeGallery } from "@/lib/home-gallery";
+import { homeGallery } from "@/data/home-gallery";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -9,10 +9,12 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [wipePhase, setWipePhase] = useState<"idle" | "in" | "out">("in");
 
+  const duration = 6000;
+
   useEffect(() => {
     const interval = setInterval(() => {
       setWipePhase("in");
-    }, 10000);
+    }, duration);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
@@ -51,6 +53,13 @@ export default function Home() {
             {tag}
           </Badge>
         ))}
+      </div>
+      <div className="absolute bottom-0 left-0 w-full h-1 mix-blend-difference">
+        <div
+          key={currentIndex}
+          className="h-full bg-white animate-[progress]"
+          style={{ animation: `progress ${duration}ms linear forwards` }}
+        ></div>
       </div>
       <div
         className={`absolute top-0 left-0 w-full h-full ${homeGallery[currentIndex].wipeColor} transition ease-out

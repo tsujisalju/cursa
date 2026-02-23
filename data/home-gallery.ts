@@ -1,0 +1,58 @@
+export const homeGallery = [
+  {
+    src: "/personal/blossom.webp",
+    title: "Blossom",
+    className: "object-[50%_41%]",
+    wipeColor: "bg-amber-950",
+    tags: ["Personal", "Fanart"],
+  },
+  {
+    src: "/commercial/minswap/minswap-graphics.webp",
+    title: "Minswap V1",
+    className: "object-[50%_50%]",
+    wipeColor: "bg-sky-950",
+    tags: ["Works", "Branding", "Frontend"],
+  },
+  {
+    src: "/personal/hellfire.webp",
+    title: "Hellfire",
+    className: "object-[50%_10%]",
+    wipeColor: "bg-red-950",
+    tags: ["Personal", "Fanart"],
+  },
+  {
+    src: "/commercial/steelswap/steelswap-bg2.webp",
+    title: "Steelswap",
+    className: "object-[50%_50%]",
+    wipeColor: "bg-pink-950",
+    tags: ["Works", "UI/UX"],
+  },
+  {
+    src: "/personal/cherry.webp",
+    title: "Cherry",
+    className: "object-[50%_10%]",
+    wipeColor: "bg-teal-950",
+    tags: ["Personal", "Original"],
+  },
+  {
+    src: "/personal/silverlight.webp",
+    title: "Silverlight",
+    className: "object-[50%_30%]",
+    wipeColor: "bg-sky-950",
+    tags: ["Personal", "Original"],
+  },
+  {
+    src: "/personal/dayswork.webp",
+    title: "Day's Work",
+    className: "object-[50%_15%]",
+    wipeColor: "bg-yellow-950",
+    tags: ["Personal", "Fanart"],
+  },
+  {
+    src: "/commercial/purritogeneral/purrito-noodles.webp",
+    title: "Purrito General",
+    className: "object-[50%_50%]",
+    wipeColor: "bg-indigo-950",
+    tags: ["Works", "Branding"],
+  },
+];

@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./header";
 import Footer from "./footer";
+import PageTransition from "@/components/page-transition";
+import LayoutProvider from "@/components/layout-provider";
 
 const aileron = localFont({
   variable: "--font-aileron",
@@ -103,8 +105,10 @@ export default function RootLayout({
         className={`${aileron.variable} ${cooper.variable} ${flareserif.variable} antialiased`}
       >
         <div className="flex flex-col lg:flex-row h-screen">
-          <Header />
-          <div className="flex grow rounded-lg overflow-hidden">{children}</div>
+          <LayoutProvider>
+            <Header />
+            <PageTransition>{children}</PageTransition>
+          </LayoutProvider>
           <Footer />
         </div>
       </body>
