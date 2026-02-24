@@ -4,7 +4,7 @@ import ArtGalleryItem from "./art-gallery-item";
 
 export default function ArtGallery() {
   return (
-    <div className="h-full grow grid grid-rows-2 grid-flow-col-dense auto-cols-[20%] gap-1 overflow-x-auto">
+    <div className="h-full grow grid grid-rows-2 grid-flow-col-dense auto-cols-[50%] lg:auto-cols-[40%] xl:auto-cols-[30%] gap-1 overflow-x-auto">
       {[...artPieces]
         .sort((a, b) => {
           const dateA = new Date(a.date);

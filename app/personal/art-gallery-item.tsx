@@ -24,10 +24,10 @@ export default function ArtGalleryItem({
         fill
       />
       <div
-        className={`absolute bottom-4 left-4 flex flex-row space-x-2 text-white mix-blend-difference transition duration-100 ${isHovered ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"}`}
+        className={`absolute bottom-4 left-4 flex flex-row space-x-2 text-white text-lg lg:text-2xl mix-blend-difference transition duration-100 ${isHovered ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"}`}
       >
-        <h1 className="font-sans font-bold text-2xl">{art.title}</h1>
-        <p className="font-sans text-2xl">{date.toLocaleDateString()}</p>
+        <h1 className="font-sans font-bold">{art.title}</h1>
+        <p className="font-sans">{date.toLocaleDateString()}</p>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import MacNManaLogo from "@/public/commercial/mac-n-mana/mac-n-mana-logo";
 import MinswapLogo from "@/public/commercial/minswap/minswap-logo";
 import PurritoGeneralLogo from "@/public/commercial/purritogeneral/purrito-general-logo";
 import SteelSwapLogo from "@/public/commercial/steelswap/steelswap-logo";
@@ -18,6 +19,24 @@ export interface CommercialWork {
 }
 
 export const commercialWorks: CommercialWork[] = [
+  {
+    id: "mac-n-mana",
+    client: "Mac n' Mana",
+    project: "EthGlobal Online Hackathon 2025",
+    startDate: "2025-10-10",
+    endDate: "2025-12-19",
+    skills: ["Solidity", "Nextjs"],
+    testimonial: undefined,
+    testimonialAuthor: undefined,
+    deliverables: ["Dapp Prototype", "Frontend"],
+    logo: (
+      <div className="flex flex-row space-x-2 font-sans items-center text-zinc-50 dark:text-zinc-50 w-49">
+        <span>🍔</span>
+        <MacNManaLogo />
+      </div>
+    ),
+    images: ["/commercial/mac-n-mana/mac-n-mana-cover2.webp"],
+  },
   {
     id: "purrito-general",
     client: "Purrito General",
