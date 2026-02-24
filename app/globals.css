@@ -221,6 +221,10 @@
     }
 }
 
+div {
+    scrollbar-width: thin;
+}
+
 /* View Transitions API */
 
 /* Disable the default root transition to prevent fade effect */

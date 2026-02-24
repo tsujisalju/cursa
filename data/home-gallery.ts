@@ -21,6 +21,13 @@ export const homeGallery = [
     tags: ["Personal", "Fanart"],
   },
   {
+    src: "/personal/sacrifice.webp",
+    title: "Sacrifice",
+    className: "object-[50%_50%]",
+    wipeColor: "bg-red-950",
+    tags: ["Personal", "Original"],
+  },
+  {
     src: "/commercial/steelswap/steelswap-bg2.webp",
     title: "Steelswap",
     className: "object-[50%_50%]",

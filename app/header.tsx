@@ -8,7 +8,7 @@ import TransitionLink from "@/components/transition-link";
 
 export default function Header() {
   return (
-    <div className="relative flex flex-col justify-center items-center py-2 space-y-2 overflow-hidden lg:[writing-mode:vertical-lr]">
+    <div className="relative shrink-0 flex flex-col justify-center items-center py-2 space-y-2 overflow-hidden lg:[writing-mode:vertical-lr]">
       <Slogan />
       <TsujisaljuLogoOutline className="absolute w-full min-w-200 h-auto opacity-60 lg:rotate-90 -z-10" />
       <TransitionLink href="/">

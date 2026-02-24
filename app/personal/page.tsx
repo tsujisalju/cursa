@@ -1,13 +1,17 @@
+"use client";
+
 import SectionHero from "@/components/section-hero";
+import SectionLayout from "@/components/section-layout";
+import ArtGallery from "./art-gallery";
 
 export default function Personal() {
   return (
-    <div className="flex flex-col grow m-1 space-y-2 overflow-hidden">
+    <SectionLayout>
       <SectionHero
         header="Personal"
         description="Tales of mythical creatures from a world not so different than ours."
       />
-      <div className="flex flex-row grow space-x-4">Coming soon :3</div>
-    </div>
+      <ArtGallery />
+    </SectionLayout>
   );
 }

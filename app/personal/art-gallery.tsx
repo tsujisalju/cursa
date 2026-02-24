@@ -1,0 +1,39 @@
+import { artPieces } from "@/data/art/personal";
+import Image from "next/image";
+import ArtGalleryItem from "./art-gallery-item";
+
+export default function ArtGallery() {
+  return (
+    <div className="h-full grow grid grid-rows-2 grid-flow-col-dense auto-cols-[20%] gap-1 overflow-x-auto">
+      {[...artPieces]
+        .sort((a, b) => {
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateA < dateB ? 1 : -1;
+        })
+        .map((art, index) => {
+          let spanClasses = "";
+          switch (art.orientation) {
+            case "landscape":
+              spanClasses = "col-span-2 row-span-1";
+              break;
+            case "portrait":
+              spanClasses = "col-span-1 row-span-2";
+              break;
+            case "square":
+              spanClasses = "col-span-1 row-span-1";
+              break;
+            default:
+              spanClasses = "";
+          }
+          return (
+            <ArtGalleryItem
+              key={art.id}
+              art={art}
+              className={`relative h-full w-full ${spanClasses}`}
+            />
+          );
+        })}
+    </div>
+  );
+}

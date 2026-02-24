@@ -1,4 +1,11 @@
-export type characterID = "cooper" | "van" | "mynx" | "tsubaki" | "acura";
+export type characterID =
+  | "cooper"
+  | "van"
+  | "mynx"
+  | "tsubaki"
+  | "acura"
+  | "ghost"
+  | "emmie";
 
 export interface Character {
   id: characterID;

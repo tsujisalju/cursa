@@ -57,7 +57,7 @@ export const commercialWorks: CommercialWork[] = [
       "0 regrets on this design purrnama. You are doing amazing work.",
     testimonialAuthor: "Elder Millenial, Steelswap Founder",
     deliverables: ["UI/UX Design", "Brand Assets"],
-    logo: <SteelSwapLogo />,
+    logo: <SteelSwapLogo className="text-zinc-50 dark:text-zinc-50 w-49" />,
     images: [
       "/commercial/steelswap/steelswap-bg2.webp",
       "/commercial/steelswap/steelswap-bg.webp",
@@ -75,7 +75,12 @@ export const commercialWorks: CommercialWork[] = [
     testimonial: undefined,
     testimonialAuthor: undefined,
     deliverables: ["Marketing Assets", "Merchandise", "Frontend"],
-    logo: <MinswapLogo />,
+    logo: (
+      <div className="flex flex-row space-x-2 font-sans items-center text-zinc-50 dark:text-zinc-50 w-49">
+        <MinswapLogo />
+        <span>V1</span>
+      </div>
+    ),
     images: [
       "/commercial/minswap/minswap-volume.webp",
       "/commercial/minswap/minswap-ui.webp",
