@@ -54,7 +54,7 @@ export default function Home() {
           </Badge>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-1 mix-blend-difference">
+      <div className="absolute bottom-0 left-0 w-full h-1.5 mix-blend-difference">
         <div
           key={currentIndex}
           className="h-full bg-white animate-[progress]"

@@ -2,6 +2,7 @@ import SectionHero from "@/components/section-hero";
 import SectionLayout from "@/components/section-layout";
 import { commercialWorks } from "@/data/art/commercial";
 import Image from "next/image";
+import CommercialItem from "./commercial-item";
 
 export default function Commercial() {
   return (
@@ -12,15 +13,7 @@ export default function Commercial() {
       />
       <div className="flex flex-row grow space-x-1 overflow-x-auto">
         {commercialWorks.map((work, index) => (
-          <div className="flex flex-col p-16 justify-end relative" key={index}>
-            <Image
-              src={work.images ? work.images[0] : ""}
-              alt={work.id}
-              fill
-              className="object-cover"
-            />
-            <div className="relative">{work.logo}</div>
-          </div>
+          <CommercialItem work={work} key={index} />
         ))}
       </div>
     </SectionLayout>

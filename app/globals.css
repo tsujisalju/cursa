@@ -61,14 +61,27 @@
             width: 100%;
         }
     }
+
+    --animate-spin-3d: spin-3d 6s linear infinite;
+    @keyframes spin-3d {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-aileron);
+    --font-sans: var(--font-geist);
     --font-serif: var(--font-cooper);
     --font-display: var(--font-flareserif);
+    --font-nyght: var(--font-nyght);
+    --font-isenheim: var(--font-isenheim);
+    --font-pilowlava: var(--font-pilowlava);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);

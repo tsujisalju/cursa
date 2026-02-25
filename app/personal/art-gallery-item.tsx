@@ -10,6 +10,7 @@ export default function ArtGalleryItem({
   className?: string;
 }) {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const date = new Date(art.date);
   return (
     <div
@@ -20,8 +21,9 @@ export default function ArtGalleryItem({
       <Image
         src={art.image}
         alt={art.description ?? "An artwork"}
-        className="object-cover"
+        className={`object-cover transition duration-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}
         fill
+        onLoad={() => setIsLoaded(true)}
       />
       <div
         className={`absolute bottom-4 left-4 flex flex-row space-x-2 text-white text-lg lg:text-2xl mix-blend-difference transition duration-100 ${isHovered ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"}`}

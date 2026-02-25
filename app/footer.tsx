@@ -1,10 +1,14 @@
 import Link from "next/link";
+import TsujisaljuLogo from "./tsujisalju-logo";
 
 export default function Footer() {
   return (
     <div className="flex flex-row w-full lg:w-auto lg:h-full justify-center lg:justify-between items-center p-4 lg:[writing-mode:vertical-lr]">
-      <div className="hidden lg:block font-display text-lg font-bold uppercase">
-        Have faith in the creator, and our ability to create
+      <div className="hidden lg:flex flex-row space-x-4 items-center">
+        <TsujisaljuLogo className="h-6 w-6 origin-center scale-120 animate-spin-3d" />
+        <h2 className="font-display text-lg font-bold uppercase">
+          Have faith in the creator, and our ability to create
+        </h2>
       </div>
       <div className="flex flex-row space-x-8 ">
         <Link

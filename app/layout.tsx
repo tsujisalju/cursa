@@ -5,70 +5,87 @@ import Header from "./header";
 import Footer from "./footer";
 import PageTransition from "@/components/page-transition";
 import LayoutProvider from "@/components/layout-provider";
+import { Geist } from "next/font/google";
 
 const aileron = localFont({
   variable: "--font-aileron",
   src: [
     {
-      path: "./fonts/Aileron-Regular.otf",
+      path: "./fonts/aileron/Aileron-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/Aileron-Bold.otf",
+      path: "./fonts/aileron/Aileron-Bold.otf",
       weight: "700",
       style: "bold",
     },
     {
-      path: "./fonts/Aileron-Black.otf",
+      path: "./fonts/aileron/Aileron-Black.otf",
       weight: "900",
       style: "black",
     },
     {
-      path: "./fonts/Aileron-Italic.otf",
+      path: "./fonts/aileron/Aileron-Italic.otf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "./fonts/Aileron-BoldItalic.otf",
+      path: "./fonts/aileron/Aileron-BoldItalic.otf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "./fonts/Aileron-UltraLight.otf",
+      path: "./fonts/aileron/Aileron-UltraLight.otf",
       weight: "300",
       style: "light",
     },
     {
-      path: "./fonts/Aileron-UltraLightItalic.otf",
+      path: "./fonts/aileron/Aileron-UltraLightItalic.otf",
       weight: "300",
       style: "italic",
     },
   ],
 });
 
-const cooper = localFont({
-  variable: "--font-cooper",
+const nyght = localFont({
+  variable: "--font-nyght",
   src: [
     {
-      path: "./fonts/Cooper-Regular.otf",
+      path: "./fonts/nyght/NyghtSerif-Light.otf",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "./fonts/nyght/NyghtSerif-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/Cooper-Bold.otf",
+      path: "./fonts/nyght/NyghtSerif-Bold.otf",
       weight: "700",
       style: "bold",
     },
     {
-      path: "./fonts/Cooper-Italic.otf",
+      path: "./fonts/nyght/NyghtSerif-Dark.otf",
+      weight: "800",
+      style: "extrabold",
+    },
+  ],
+});
+
+const isenheim = localFont({
+  variable: "--font-isenheim",
+  src: [
+    {
+      path: "./fonts/isenheim/Isenheim_Regulier.otf",
       weight: "400",
-      style: "italic",
+      style: "normal",
     },
     {
-      path: "./fonts/Cooper-BoldItalic.otf",
-      weight: "700",
-      style: "italic",
+      path: "./fonts/isenheim/Isenheim_Fin.otf",
+      weight: "300",
+      style: "light",
     },
   ],
 });
@@ -77,16 +94,32 @@ const flareserif = localFont({
   variable: "--font-flareserif",
   src: [
     {
-      path: "./fonts/Flareserif-821-Regular.otf",
+      path: "./fonts/flareserif/Flareserif-821-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/Flareserif-821-Bold.otf",
+      path: "./fonts/flareserif/Flareserif-821-Bold.otf",
       weight: "700",
       style: "bold",
     },
   ],
+});
+
+const pilowlava = localFont({
+  variable: "--font-pilowlava",
+  src: [
+    {
+      path: "./fonts/Pilowlava-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
 });
 
 export const metadata: Metadata = {
@@ -102,7 +135,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aileron.variable} ${cooper.variable} ${flareserif.variable} antialiased`}
+        className={`${aileron.variable} ${geist.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} antialiased`}
       >
         <div className="flex flex-col lg:flex-row h-screen">
           <LayoutProvider>
