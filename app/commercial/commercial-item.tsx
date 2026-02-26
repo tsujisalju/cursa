@@ -1,13 +1,15 @@
 "use client";
 
+import { useHorizontalScroll } from "@/components/horizontal-scroll";
 import { CommercialWork } from "@/data/art/commercial";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function CommercialItem({ work }: { work: CommercialWork }) {
   const [isloaded, setIsLoaded] = useState<boolean>(false);
+
   return (
-    <div className="flex flex-col w-100 py-16 justify-end items-center relative">
+    <div className="flex flex-col shrink-0 w-100 py-16 justify-end items-center relative">
       <Image
         src={work.images ? work.images[0] : ""}
         alt={work.id}

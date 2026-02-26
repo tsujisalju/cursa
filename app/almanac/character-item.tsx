@@ -32,11 +32,14 @@ export default function CharacterItem({ character }: { character: Character }) {
           <span className="font-display text-xl">Coming Soon!</span>
         </div>
       )}
-      <h3
-        className={`${character.class_font ?? "font-display font-bold"} text-5xl uppercase [writing-mode:vertical-lr]`}
-      >
-        {character.name}
-      </h3>
+      <div className="flex flex-row space-x-2 justify-center items-center w-max [writing-mode:vertical-lr]">
+        {character.emblem}
+        <h3
+          className={`${character.class_font ?? "font-display font-bold"} text-5xl uppercase`}
+        >
+          {character.name}
+        </h3>
+      </div>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+"use client";
 import { ArtPiece } from "@/data/art/personal";
 import Image from "next/image";
 import { useState } from "react";

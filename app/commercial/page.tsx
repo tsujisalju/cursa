@@ -1,8 +1,8 @@
 import SectionHero from "@/components/section-hero";
 import SectionLayout from "@/components/section-layout";
 import { commercialWorks } from "@/data/art/commercial";
-import Image from "next/image";
 import CommercialItem from "./commercial-item";
+import { HorizontalScrollContainer } from "@/components/horizontal-scroll";
 
 export default function Commercial() {
   return (
@@ -11,11 +11,11 @@ export default function Commercial() {
         header="Commercial"
         description="From individuals, startups to global teams, traces of my art travel along in their separate journeys."
       />
-      <div className="flex flex-row grow space-x-1 overflow-x-auto">
+      <HorizontalScrollContainer className="flex flex-row grow space-x-1 overflow-x-auto">
         {commercialWorks.map((work, index) => (
           <CommercialItem work={work} key={index} />
         ))}
-      </div>
+      </HorizontalScrollContainer>
     </SectionLayout>
   );
 }

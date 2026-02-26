@@ -2,8 +2,8 @@
 
 import Navbar from "@/app/navbar";
 import { Slogan } from "@/app/slogan";
-import TsujisaljuTextLogo from "@/app/tsujisalju-textlogo";
-import TsujisaljuTextLogoOutline from "@/app/tsujisalju-textlogo-outline";
+import TsujisaljuTextLogo from "@/components/logo/tsujisalju-textlogo";
+import TsujisaljuTextLogoOutline from "@/components/logo/tsujisalju-textlogo-outline";
 import TransitionLink from "@/components/transition-link";
 
 export default function Header() {

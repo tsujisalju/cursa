@@ -1,10 +1,10 @@
 import { artPieces } from "@/data/art/personal";
-import Image from "next/image";
 import ArtGalleryItem from "./art-gallery-item";
+import { HorizontalScrollContainer } from "@/components/horizontal-scroll";
 
 export default function ArtGallery() {
   return (
-    <div className="h-full grow grid grid-rows-2 grid-flow-col-dense auto-cols-[50%] lg:auto-cols-[40%] xl:auto-cols-[30%] gap-1 overflow-x-auto">
+    <HorizontalScrollContainer className="h-full grow grid grid-rows-2 grid-flow-col-dense auto-cols-[60%] lg:auto-cols-[40%] xl:auto-cols-[30%] gap-1 overflow-x-auto">
       {[...artPieces]
         .sort((a, b) => {
           const dateA = new Date(a.date);
@@ -34,6 +34,6 @@ export default function ArtGallery() {
             />
           );
         })}
-    </div>
+    </HorizontalScrollContainer>
   );
 }

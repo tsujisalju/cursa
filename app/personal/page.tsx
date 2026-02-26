@@ -1,5 +1,3 @@
-"use client";
-
 import SectionHero from "@/components/section-hero";
 import SectionLayout from "@/components/section-layout";
 import ArtGallery from "./art-gallery";
