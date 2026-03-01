@@ -11,6 +11,8 @@ export interface CommercialWork {
   startDate: string;
   endDate: string;
   skills: string[];
+  description: string;
+  link: string;
   testimonial?: string;
   testimonialAuthor?: string;
   deliverables: string[];
@@ -26,11 +28,14 @@ export const commercialWorks: CommercialWork[] = [
     startDate: "2025-10-10",
     endDate: "2025-12-19",
     skills: ["Solidity", "Nextjs"],
+    description:
+      "Developed a decentralized marketplace for NFTs using Solidity and Next.js.",
+    link: "https://mac-n-mana.vercel.app",
     testimonial: undefined,
     testimonialAuthor: undefined,
     deliverables: ["Dapp Prototype", "Frontend"],
     logo: (
-      <div className="flex flex-row space-x-2 font-sans items-center text-zinc-50 dark:text-zinc-50 w-49">
+      <div className="flex flex-row space-x-2 font-sans items-center text-zinc-50 dark:text-zinc-50 w-49 text-xl">
         <span>🍔</span>
         <MacNManaLogo />
       </div>
@@ -44,6 +49,9 @@ export const commercialWorks: CommercialWork[] = [
     startDate: "2024-10-01",
     endDate: "Present",
     skills: ["Illustration", "Branding"],
+    description:
+      "A brand revamp for PurritoGeneral, Co-founder of Noodles Finance on Sui, Advisory for Minswap DEX on Cardano. Featuring a new mascot design and a slew of brand assets with a unique twist of cats, anime and military.",
+    link: "https://x.com/purritogeneral",
     testimonial:
       "this all is super solid, im so excited to release it and evolve my character, thanks so much 🙂",
     testimonialAuthor: "Purrito General",
@@ -72,6 +80,9 @@ export const commercialWorks: CommercialWork[] = [
     startDate: "2023-12-01",
     endDate: "2024-03-01",
     skills: ["Graphic Design", "UI/UX Design"],
+    description:
+      "Led the UI/UX Design for SteelSwap Aggregator, using Figma to visualize UI components and aesthetics of the interface. Adopting innovations in trading experiences from other blockchains to Cardano with critical acclaim, >$60M USD in total trading volume.",
+    link: "https://steelswap.io",
     testimonial:
       "0 regrets on this design purrnama. You are doing amazing work.",
     testimonialAuthor: "Elder Millenial, Steelswap Founder",
@@ -91,6 +102,9 @@ export const commercialWorks: CommercialWork[] = [
     startDate: "2021-05-01",
     endDate: "2024-01-01",
     skills: ["Graphic Design", "Frontend Development"],
+    description:
+      "Provide graphic design for marketing and merchandise, establishing brand identity through mascot illustrations, later assisting in developing the trading interface for Minswap DEX using Next.js and Tailwindcss, worked with a global team of agile individuals. >60K followers on X.",
+    link: "https://minswap.org",
     testimonial: undefined,
     testimonialAuthor: undefined,
     deliverables: ["Marketing Assets", "Merchandise", "Frontend"],
