@@ -9,7 +9,7 @@ export default function Almanac() {
     <SectionLayout>
       <SectionHero
         header="Almanac"
-        description="Hardship, longing, refuge and nostalgia. Get to know the characters who drive my narrative."
+        description="Get to know the characters who drive my narrative. Driven by the hidden corners of emotion."
       />
       <HorizontalScrollContainer
         className={"flex flex-row grow space-x-1 overflow-x-auto"}

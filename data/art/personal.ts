@@ -8,11 +8,25 @@ export interface ArtPiece {
   type: "illustration" | "concept" | "comic" | "graphic design" | "fanart";
   description?: string;
   story?: string;
+  thumb?: string;
   image: string;
   orientation: "portrait" | "landscape" | "square";
 }
 
 export const artPieces: ArtPiece[] = [
+  {
+    id: "featherbound",
+    title: "Featherbound",
+    date: "2026-03-01",
+    characters: [],
+    type: "fanart",
+    description:
+      "An anime-style interpretation of the featherbound set skin from Hytale",
+    story: undefined,
+    thumb: "/personal/featherbound/featherbound-thumb.webp",
+    image: "/personal/featherbound/featherbound.webp",
+    orientation: "landscape",
+  },
   {
     id: "sacrifice",
     title: "Sacrifice",

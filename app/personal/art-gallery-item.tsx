@@ -20,14 +20,14 @@ export default function ArtGalleryItem({
       onMouseLeave={() => setIsHovered(false)}
     >
       <Image
-        src={art.image}
+        src={art.thumb ?? art.image}
         alt={art.description ?? "An artwork"}
         className={`object-cover transition duration-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}
         fill
         onLoad={() => setIsLoaded(true)}
       />
       <div
-        className={`absolute bottom-4 left-4 flex flex-row space-x-2 text-white text-lg lg:text-2xl mix-blend-difference transition duration-100 ${isHovered ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"}`}
+        className={`absolute bottom-4 left-4 flex flex-row space-x-2 text-white text-lg lg:text-2xl mix-blend-difference transition ease-bounce-out duration-200 ${isHovered ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"}`}
       >
         <h1 className="font-sans font-bold">{art.title}</h1>
         <p className="font-sans">{date.toLocaleDateString()}</p>

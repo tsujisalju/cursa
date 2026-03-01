@@ -7,7 +7,7 @@ export default function Personal() {
     <SectionLayout>
       <SectionHero
         header="Personal"
-        description="Tales of mythical creatures from a world not so different than ours."
+        description="Works for myself. And soon to be yours if you're interested!"
       />
       <ArtGallery />
     </SectionLayout>

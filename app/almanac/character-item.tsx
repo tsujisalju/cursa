@@ -17,7 +17,7 @@ export default function CharacterItem({ character }: { character: Character }) {
     >
       {character.design ? (
         <div
-          className={`absolute ${character.class_position ?? "-top-[10%] -left-[50%]"} h-375 w-250 pointer-events-none transition duration-400 ease-out ${isHovered ? "z-50 translate-x-5 mix-blend-normal" : "translate-x-0 mix-blend-overlay"}`}
+          className={`absolute ${character.class_position ?? "-top-[10%] -left-[50%]"} h-375 w-250 pointer-events-none transition duration-400 ease-bounce-out ${isHovered ? "z-50 translate-x-5 mix-blend-normal" : "translate-x-0 mix-blend-overlay"}`}
         >
           <Image
             src={character.design}
