@@ -4,6 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.parallax-tilt-outer {
+    transform-style: preserve-3d;
+}
+
+.parallax-tilt-inner {
+    transform: translateZ(60px);
+}
+
 @theme {
     --ease-bounce-out: cubic-bezier(0, 1.5, 0.5, 1);
     --animate-marquee: marquee 90s linear infinite;

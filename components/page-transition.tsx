@@ -22,7 +22,7 @@ export default function PageTransition({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex grow rounded-lg overflow-x-hidden page-content-wrapper">
+    <div className="flex grow overflow-x-hidden page-content-wrapper relative">
       {children}
     </div>
   );

@@ -27,9 +27,9 @@ export const commercialWorks: CommercialWork[] = [
     project: "EthGlobal Online Hackathon 2025",
     startDate: "2025-10-10",
     endDate: "2025-12-19",
-    skills: ["Solidity", "Nextjs"],
+    skills: ["Ethereum", "Solidity", "Hardhat", "Next.js"],
     description:
-      "Developed a decentralized marketplace for NFTs using Solidity and Next.js.",
+      "Mac n’ Mana is a decentralized restaurant review platform that uses the immutability of blockchain with the practicality of real-world discovery. Designed to empower diners and foodies, it enables users to search for restaurants, submit reviews, and vote on others’ feedback — all while earning reputation on-chain.",
     link: "https://mac-n-mana.vercel.app",
     testimonial: undefined,
     testimonialAuthor: undefined,
@@ -44,11 +44,11 @@ export const commercialWorks: CommercialWork[] = [
   },
   {
     id: "purrito-general",
-    client: "Purrito General",
+    client: "PurritoGeneral",
     project: "Brand Revamp",
     startDate: "2024-10-01",
     endDate: "Present",
-    skills: ["Illustration", "Branding"],
+    skills: ["Illustration", "Branding", "Krita"],
     description:
       "A brand revamp for PurritoGeneral, Co-founder of Noodles Finance on Sui, Advisory for Minswap DEX on Cardano. Featuring a new mascot design and a slew of brand assets with a unique twist of cats, anime and military.",
     link: "https://x.com/purritogeneral",
@@ -60,9 +60,7 @@ export const commercialWorks: CommercialWork[] = [
       "Social Media Assets",
       "Article Illustrations",
     ],
-    logo: (
-      <PurritoGeneralLogo className="text-zinc-50 dark:text-zinc-50 w-49" />
-    ),
+    logo: <PurritoGeneralLogo />,
     images: [
       "/commercial/purritogeneral/purrito-raining-coins.webp",
       "/commercial/purritogeneral/purrito-storytime.webp",
@@ -79,15 +77,18 @@ export const commercialWorks: CommercialWork[] = [
     project: "UI/UX Design Revamp",
     startDate: "2023-12-01",
     endDate: "2024-03-01",
-    skills: ["Graphic Design", "UI/UX Design"],
+    skills: ["Graphic Design", "UI/UX Design", "Krita", "Figma"],
     description:
       "Led the UI/UX Design for SteelSwap Aggregator, using Figma to visualize UI components and aesthetics of the interface. Adopting innovations in trading experiences from other blockchains to Cardano with critical acclaim, >$60M USD in total trading volume.",
     link: "https://steelswap.io",
     testimonial:
       "0 regrets on this design purrnama. You are doing amazing work.",
     testimonialAuthor: "Elder Millenial, Steelswap Founder",
-    deliverables: ["UI/UX Design", "Brand Assets"],
-    logo: <SteelSwapLogo className="text-zinc-50 dark:text-zinc-50 w-49" />,
+    deliverables: [
+      "UI/UX design featuring a rusty cyberpunk aesthetic",
+      "Logo design and brand assets",
+    ],
+    logo: <SteelSwapLogo />,
     images: [
       "/commercial/steelswap/steelswap-bg2.webp",
       "/commercial/steelswap/steelswap-bg.webp",
@@ -101,15 +102,26 @@ export const commercialWorks: CommercialWork[] = [
     project: "Designer and Frontend Developer",
     startDate: "2021-05-01",
     endDate: "2024-01-01",
-    skills: ["Graphic Design", "Frontend Development"],
+    skills: [
+      "Graphic Design",
+      "Frontend Development",
+      "Krita",
+      "Inkscape",
+      "Next.js",
+      "Shopify",
+    ],
     description:
       "Provide graphic design for marketing and merchandise, establishing brand identity through mascot illustrations, later assisting in developing the trading interface for Minswap DEX using Next.js and Tailwindcss, worked with a global team of agile individuals. >60K followers on X.",
     link: "https://minswap.org",
     testimonial: undefined,
     testimonialAuthor: undefined,
-    deliverables: ["Marketing Assets", "Merchandise", "Frontend"],
+    deliverables: [
+      "Mascot design for marketing assets",
+      "Merchandise design and storefront management",
+      "Frontend tasks",
+    ],
     logo: (
-      <div className="flex flex-row space-x-2 font-sans items-center text-zinc-50 dark:text-zinc-50 w-49">
+      <div className="flex flex-row space-x-2 font-sans items-center w-49">
         <MinswapLogo />
         <span>V1</span>
       </div>

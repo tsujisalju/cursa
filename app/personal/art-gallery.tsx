@@ -4,7 +4,7 @@ import { HorizontalScrollContainer } from "@/components/horizontal-scroll";
 
 export default function ArtGallery() {
   return (
-    <HorizontalScrollContainer className="h-full grow grid grid-rows-2 grid-flow-col-dense auto-cols-[60%] lg:auto-cols-[40%] xl:auto-cols-[30%] gap-1 overflow-x-auto">
+    <HorizontalScrollContainer className="h-full grow grid grid-rows-2 grid-flow-col-dense auto-cols-[60%] lg:auto-cols-[40%] xl:auto-cols-[30%] gap-1 overflow-x-auto py-8">
       {[...artPieces]
         .sort((a, b) => {
           const dateA = new Date(a.date);
