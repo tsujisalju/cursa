@@ -29,7 +29,7 @@ export const commercialWorks: CommercialWork[] = [
     endDate: "2025-12-19",
     skills: ["Ethereum", "Solidity", "Hardhat", "Next.js"],
     description:
-      "Mac n’ Mana is a decentralized restaurant review platform that uses the immutability of blockchain with the practicality of real-world discovery. Designed to empower diners and foodies, it enables users to search for restaurants, submit reviews, and vote on others’ feedback — all while earning reputation on-chain.",
+      "Mac n’ Mana is a decentralized restaurant review platform aiming to empower diners and foodies by enabling them to search for restaurants, submit reviews, and vote on others’ feedback while earning reputation on-chain.",
     link: "https://mac-n-mana.vercel.app",
     testimonial: undefined,
     testimonialAuthor: undefined,

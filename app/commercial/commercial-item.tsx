@@ -1,10 +1,8 @@
 "use client";
 
-import { useHorizontalScroll } from "@/components/horizontal-scroll";
 import TransitionLink from "@/components/transition-link";
 import { CommercialWork } from "@/data/art/commercial";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import Tilt from "react-parallax-tilt";
 
