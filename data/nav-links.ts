@@ -8,8 +8,13 @@ export const navLinks = [
 
 // Helper function to get page index by href
 export function getPageIndex(href: string): number {
-  const link = navLinks.find((link) => link.href === href);
-  return link?.index ?? 0;
+  const link = navLinks.find((link) => link.href.includes(href));
+  return link?.index ?? -1;
+}
+
+// Helper function to check if a page exists in nav-links
+export function isNavPage(href: string): boolean {
+  return getPageIndex(href) !== -1;
 }
 
 // Helper function to get all page routes as a map

@@ -6,11 +6,13 @@ import { getPageIndex } from "@/data/nav-links";
 interface PageIndexContextType {
   currentIndex: number;
   setCurrentIndex: (index: number) => void;
-  getTransitionDirection: (targetHref: string) => "up" | "down" | "none";
+  getTransitionDirection: (
+    targetHref: string,
+  ) => "up" | "down" | "fade" | "none";
 }
 
 const PageIndexContext = createContext<PageIndexContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export function PageIndexProvider({
@@ -21,12 +23,18 @@ export function PageIndexProvider({
   initialPath?: string;
 }) {
   const [currentIndex, setCurrentIndex] = useState<number>(
-    getPageIndex(initialPath)
+    getPageIndex(initialPath),
   );
 
-  const getTransitionDirection = (targetHref: string): "up" | "down" | "none" => {
+  const getTransitionDirection = (
+    targetHref: string,
+  ): "up" | "down" | "fade" | "none" => {
     const targetIndex = getPageIndex(targetHref);
 
+    // Use fade transition if page index is not found (not in nav-links)
+    if (targetIndex === -1 || currentIndex === -1) {
+      return "fade";
+    }
     if (targetIndex === currentIndex) {
       return "none";
     }

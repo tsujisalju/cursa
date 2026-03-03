@@ -42,8 +42,22 @@ export default function NavLink({ href, children, ...props }: NavLinkProps) {
     // Set CSS custom properties for animation direction BEFORE starting transition
     // This must be set synchronously before startViewTransition is called
     const oldAnimation =
-      direction === "down" ? "slide-down-out" : "slide-up-out";
-    const newAnimation = direction === "down" ? "slide-down-in" : "slide-up-in";
+      direction === "fade"
+        ? "fade-out"
+        : direction === "down"
+          ? "slide-down-out"
+          : "slide-up-out";
+    const newAnimation =
+      direction === "fade"
+        ? "fade-in"
+        : direction === "down"
+          ? "slide-down-in"
+          : "slide-up-in";
+
+    // Log when using fade transition for non-nav pages
+    if (direction === "fade") {
+      console.log("Using fade transition (page not in nav-links)");
+    }
 
     document.documentElement.style.setProperty(
       "--transition-old-animation",
