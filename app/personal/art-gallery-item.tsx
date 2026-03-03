@@ -7,9 +7,11 @@ import Tilt from "react-parallax-tilt";
 
 export default function ArtGalleryItem({
   art,
+  index,
   className,
 }: {
   art: ArtPiece;
+  index: number;
   className?: string;
 }) {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -27,7 +29,7 @@ export default function ArtGalleryItem({
         scale={1.02}
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
-        className="h-full w-full hover:z-10 parallax-tilt-outer relative flex items-start"
+        className={`h-full w-full hover:z-10 parallax-tilt-outer relative flex ${index == 0 && "justify-end"} items-start`}
       >
         <Image
           src={art.thumb ?? art.image}

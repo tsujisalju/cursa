@@ -1,8 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { commercialWorks } from "@/data/art/commercial";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import CommercialCarousel from "./commercial-carousel";
+import TransitionLink from "@/components/transition-link";
 
 export function generateStaticParams() {
   return commercialWorks.map((work) => ({ slug: work.id }));
@@ -30,10 +30,16 @@ export default async function CommercialSlugPage({
         });
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2">
-      <div></div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center">
+      <div className="w-full h-full flex items-center justify-center px-16">
+        <CommercialCarousel work={work} />
+      </div>
       <div className="flex flex-col space-y-4 p-4">
-        <Link className="flex flex-row space-x-2" href="/commercial">
+        <TransitionLink
+          className="flex flex-row space-x-2"
+          href="/commercial"
+          variant="zoom-out"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -49,7 +55,7 @@ export default async function CommercialSlugPage({
             />
           </svg>
           <span className="font-sans">Back to Commercial</span>
-        </Link>
+        </TransitionLink>
         <div className="flex flex-col">
           <div className="w-24 mb-2">{work.logo}</div>
           <h1 className="text-5xl font-display font-extrabold">

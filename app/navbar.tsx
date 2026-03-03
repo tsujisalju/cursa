@@ -1,7 +1,7 @@
 "use client";
 
 import { navLinks } from "@/data/nav-links";
-import TransitionLink from "@/components/transition-link";
+import NavLink from "@/components/nav-link";
 
 export default function Navbar() {
   return (
@@ -9,9 +9,9 @@ export default function Navbar() {
       {navLinks
         .filter((link) => link.href !== "/")
         .map((link) => (
-          <TransitionLink key={link.label} href={link.href}>
+          <NavLink key={link.label} href={link.href}>
             {link.label}
-          </TransitionLink>
+          </NavLink>
         ))}
     </div>
   );

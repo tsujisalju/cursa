@@ -17,7 +17,7 @@ export interface CommercialWork {
   testimonialAuthor?: string;
   deliverables: string[];
   logo: ReactNode;
-  images?: string[];
+  images: string[];
 }
 
 export const commercialWorks: CommercialWork[] = [

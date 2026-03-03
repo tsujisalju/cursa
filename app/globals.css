@@ -320,4 +320,48 @@ div {
             transform: translateY(0%);
         }
     }
+
+    @keyframes zoom-out-out {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+    }
+
+    @keyframes zoom-out-in {
+        from {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes zoom-in-out {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+    }
+
+    @keyframes zoom-in-in {
+        from {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
 }

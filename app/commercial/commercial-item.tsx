@@ -1,6 +1,7 @@
 "use client";
 
 import { useHorizontalScroll } from "@/components/horizontal-scroll";
+import TransitionLink from "@/components/transition-link";
 import { CommercialWork } from "@/data/art/commercial";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ export default function CommercialItem({ work }: { work: CommercialWork }) {
   const [isloaded, setIsLoaded] = useState<boolean>(false);
 
   return (
-    <Link href={`/commercial/${work.id}`}>
+    <TransitionLink href={`/commercial/${work.id}`} variant="zoom-in">
       <Tilt
         tiltReverse={true}
         scale={1.04}
@@ -30,6 +31,6 @@ export default function CommercialItem({ work }: { work: CommercialWork }) {
           <span className="shadow-lg">{work.logo}</span>
         </div>
       </Tilt>
-    </Link>
+    </TransitionLink>
   );
 }

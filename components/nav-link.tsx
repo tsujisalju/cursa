@@ -3,26 +3,26 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ComponentProps, MouseEvent, ReactNode } from "react";
+import { usePageIndex } from "./page-index-context";
+import { getPageIndex } from "@/data/nav-links";
 
-interface TransitionLinkProps extends Omit<
-  ComponentProps<typeof Link>,
-  "href"
-> {
+interface NavLinkProps extends Omit<ComponentProps<typeof Link>, "href"> {
   href: string;
   children: ReactNode;
-  variant: "fade" | "zoom-out" | "zoom-in";
 }
 
-export default function TransitionLink({
-  href,
-  children,
-  variant,
-  ...props
-}: TransitionLinkProps) {
+export default function NavLink({ href, children, ...props }: NavLinkProps) {
   const router = useRouter();
+  const { setCurrentIndex, getTransitionDirection } = usePageIndex();
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    const direction = getTransitionDirection(href);
+
+    // No transition if navigating to the same page
+    if (direction === "none") {
+      return;
+    }
 
     // Check if we're on mobile (below lg breakpoint: 1024px)
     const isMobile = window.innerWidth < 1024;
@@ -33,24 +33,18 @@ export default function TransitionLink({
       if (isMobile) {
         console.log("View transitions disabled on mobile");
       }
+      const targetIndex = getPageIndex(href);
+      setCurrentIndex(targetIndex);
       router.push(href);
       return;
     }
 
+    // Set CSS custom properties for animation direction BEFORE starting transition
+    // This must be set synchronously before startViewTransition is called
     const oldAnimation =
-      variant === "fade"
-        ? "fade-out"
-        : variant === "zoom-out"
-          ? "zoom-out-out"
-          : "zoom-in-out";
-    const newAnimation =
-      variant === "fade"
-        ? "fade-in"
-        : variant === "zoom-out"
-          ? "zoom-out-in"
-          : "zoom-in-in";
+      direction === "down" ? "slide-down-out" : "slide-up-out";
+    const newAnimation = direction === "down" ? "slide-down-in" : "slide-up-in";
 
-    // Set CSS custom properties for fade animation
     document.documentElement.style.setProperty(
       "--transition-old-animation",
       oldAnimation,
@@ -60,8 +54,10 @@ export default function TransitionLink({
       newAnimation,
     );
 
-    // Use View Transitions API with fade animation
+    // Use View Transitions API
     const transition = document.startViewTransition(() => {
+      const targetIndex = getPageIndex(href);
+      setCurrentIndex(targetIndex);
       router.push(href);
     });
 
