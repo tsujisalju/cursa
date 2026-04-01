@@ -1,5 +1,12 @@
 export const homeGallery = [
   {
+    src: "/personal/van-2026-2/van-2026-2-thumb.webp",
+    title: "Van Carina 2026",
+    className: "object-[75%_50%]",
+    wipeColor: "bg-zinc-950",
+    tags: ["Personal", "Character Design"],
+  },
+  {
     src: "/personal/blossom.webp",
     title: "Blossom",
     className: "object-[50%_41%]",
@@ -35,17 +42,10 @@ export const homeGallery = [
     tags: ["Works", "UI/UX"],
   },
   {
-    src: "/personal/cherry.webp",
-    title: "Cherry",
+    src: "/personal/forecast.webp",
+    title: "Forecast",
     className: "object-[50%_10%]",
     wipeColor: "bg-teal-950",
-    tags: ["Personal", "Original"],
-  },
-  {
-    src: "/personal/silverlight.webp",
-    title: "Silverlight",
-    className: "object-[50%_30%]",
-    wipeColor: "bg-sky-950",
     tags: ["Personal", "Original"],
   },
   {

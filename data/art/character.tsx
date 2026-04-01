@@ -52,7 +52,7 @@ export const characters: Character[] = [
     occupation: "Merchant",
     shortDesc:
       "Scorned by choices she could not make, Van's sorrow transforms into purpose as fate grants her the miracle of motherhood.",
-    design: "/personal/van-2026-2.webp",
+    design: "/personal/van-2026-2/van-2026-2.webp",
     emblem: <LongingEmblem className="h-8 w-auto" />,
     class_position: "-top-[20%] -left-[70%]",
     class_bg:

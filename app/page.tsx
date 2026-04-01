@@ -47,7 +47,7 @@ export default function Home() {
       <h1 className="absolute top-4 lg:bottom-4 left-4 font-sans font-bold text-lg lg:text-2xl mix-blend-difference text-white">
         {homeGallery[currentIndex].title}
       </h1>
-      <div className="absolute top-4 right-4 flex flex-row space-x-2">
+      <div className="absolute top-4 right-4 flex flex-wrap space-x-2">
         {homeGallery[currentIndex].tags.map((tag) => (
           <Badge key={tag} className="font-sans uppercase mix-blend-difference">
             {tag}
