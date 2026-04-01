@@ -34,7 +34,7 @@ export default async function CommercialSlugPage({
       <div className="w-full h-full flex items-center justify-center px-16">
         <CommercialCarousel work={work} />
       </div>
-      <div className="flex flex-col space-y-4 p-4">
+      <div className="w-full flex flex-col space-y-4 p-4">
         <TransitionLink
           className="flex flex-row space-x-2"
           href="/commercial"
@@ -56,16 +56,16 @@ export default async function CommercialSlugPage({
           </svg>
           <span className="font-sans">Back to Commercial</span>
         </TransitionLink>
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-2">
           <div className="w-24 mb-2">{work.logo}</div>
-          <h1 className="text-5xl font-display font-extrabold">
+          <h1 className="text-4xl lg:text-5xl font-display font-extrabold">
             {work.client}
           </h1>
           <h2 className="text-lg font-sans">{work.project}</h2>
           <p className="text-sm font-sans">{`${startDate} - ${endDate}`}</p>
         </div>
 
-        <div className="flex flex-row space-x-2">
+        <div className="flex flex-wrap gap-2">
           {work.skills.map((skill) => (
             <Badge
               key={skill}

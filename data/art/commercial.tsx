@@ -66,7 +66,6 @@ export const commercialWorks: CommercialWork[] = [
       "/commercial/purritogeneral/purrito-storytime.webp",
       "/commercial/purritogeneral/purrito-trenches.webp",
       "/commercial/purritogeneral/purrita-busy-at-work.webp",
-      "/commercial/purritogeneral/purrita-busy-at-work.webp",
       "/commercial/purritogeneral/purrito-avatar.webp",
       "/commercial/purritogeneral/purrito-header.webp",
     ],

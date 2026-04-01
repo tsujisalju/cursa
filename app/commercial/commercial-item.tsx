@@ -16,7 +16,7 @@ export default function CommercialItem({ work }: { work: CommercialWork }) {
         scale={1.04}
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
-        className="flex flex-col h-full w-100 justify-end items-center py-16 relative hover:z-10 parallax-tilt-outer"
+        className="flex flex-col h-full w-100 justify-end items-center relative hover:z-10 parallax-tilt-outer"
       >
         <Image
           src={work.images ? work.images[0] : ""}
@@ -25,7 +25,8 @@ export default function CommercialItem({ work }: { work: CommercialWork }) {
           className={`object-cover transition duration-400 ${isloaded ? "opacity-100" : "opacity-0"}`}
           onLoad={() => setIsLoaded(true)}
         />
-        <div className="relative text-zinc-50 dark:text-zinc-50 w-49 parallax-tilt-inner">
+        <div className="absolute w-full h-40 bg-linear-to-t from-black/80 to-black/0"></div>
+        <div className="relative text-zinc-50 dark:text-zinc-50 w-49 parallax-tilt-inner mb-16">
           <span className="shadow-lg">{work.logo}</span>
         </div>
       </Tilt>
