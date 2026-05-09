@@ -7,6 +7,13 @@ export const homeGallery = [
     tags: ["Personal", "Character Design"],
   },
   {
+    src: "/personal/solare/solare.webp",
+    title: "Solare",
+    className: "object-[50%_50%]",
+    wipeColor: "bg-sky-950",
+    tags: ["Personal", "Original"],
+  },
+  {
     src: "/personal/blossom.webp",
     title: "Blossom",
     className: "object-[50%_41%]",
@@ -28,25 +35,11 @@ export const homeGallery = [
     tags: ["Personal", "Fanart"],
   },
   {
-    src: "/personal/sacrifice.webp",
-    title: "Sacrifice",
-    className: "object-[50%_50%]",
-    wipeColor: "bg-red-950",
-    tags: ["Personal", "Original"],
-  },
-  {
     src: "/commercial/steelswap/steelswap-bg2.webp",
     title: "Steelswap",
     className: "object-[50%_50%]",
     wipeColor: "bg-pink-950",
     tags: ["Works", "UI/UX"],
-  },
-  {
-    src: "/personal/forecast.webp",
-    title: "Forecast",
-    className: "object-[50%_10%]",
-    wipeColor: "bg-teal-950",
-    tags: ["Personal", "Original"],
   },
   {
     src: "/personal/dayswork.webp",

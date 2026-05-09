@@ -15,6 +15,19 @@ export interface ArtPiece {
 
 export const artPieces: ArtPiece[] = [
   {
+    id: "solare",
+    title: "Solare",
+    date: "2026-04-17",
+    characters: ["tsubaki"],
+    type: "illustration",
+    description:
+      "Solare, a realistically stylized illustration of Tsubaki Nishimura. She is wearing a modern summer casual outfit. She sits on a curb of a walkway, at a harbor under a clear sunny weather.",
+    story: undefined,
+    thumb: "/personal/solare/solare-portrait.webp",
+    image: "/personal/solare/solare.webp",
+    orientation: "portrait",
+  },
+  {
     id: "featherbound",
     title: "Featherbound",
     date: "2026-03-01",
