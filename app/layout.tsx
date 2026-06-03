@@ -7,6 +7,7 @@ import PageTransition from "@/components/page-transition";
 import LayoutProvider from "@/components/layout-provider";
 import { Geist } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const aileron = localFont({
   variable: "--font-aileron",
@@ -147,6 +148,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </TooltipProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
