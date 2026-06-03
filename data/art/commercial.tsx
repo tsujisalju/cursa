@@ -40,7 +40,12 @@ export const commercialWorks: CommercialWork[] = [
         <MacNManaLogo />
       </div>
     ),
-    images: ["/commercial/mac-n-mana/mac-n-mana-cover2.webp"],
+    images: [
+      "/commercial/mac-n-mana/mac-n-mana-cover2.webp",
+      "/commercial/mac-n-mana/mac-n-mana-cover.webp",
+      "/commercial/mac-n-mana/mac-n-mana-desktop.webp",
+      "/commercial/mac-n-mana/mac-n-mana-iphone.webp",
+    ],
   },
   {
     id: "purrito-general",

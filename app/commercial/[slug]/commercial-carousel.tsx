@@ -15,7 +15,7 @@ export default function CommercialCarousel({ work }: { work: CommercialWork }) {
   return (
     <Carousel
       className="grow"
-      plugins={[Autoplay({ delay: 4000 })]}
+      plugins={[Autoplay({ delay: 4000, stopOnInteraction: true })]}
       opts={{ loop: true }}
     >
       <CarouselContent>

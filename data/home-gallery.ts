@@ -7,6 +7,13 @@ export const homeGallery = [
     tags: ["Personal", "Character Design"],
   },
   {
+    src: "/personal/pyros/pyro.webp",
+    title: "Pyros",
+    className: "object-[50%_10%]",
+    wipeColor: "bg-red-950",
+    tags: ["Personal", "Fanart"],
+  },
+  {
     src: "/personal/solare/solare.webp",
     title: "Solare",
     className: "object-[50%_50%]",
@@ -26,13 +33,6 @@ export const homeGallery = [
     className: "object-[50%_50%]",
     wipeColor: "bg-sky-950",
     tags: ["Works", "Branding", "Frontend"],
-  },
-  {
-    src: "/personal/hellfire.webp",
-    title: "Hellfire",
-    className: "object-[50%_10%]",
-    wipeColor: "bg-red-950",
-    tags: ["Personal", "Fanart"],
   },
   {
     src: "/commercial/steelswap/steelswap-bg2.webp",

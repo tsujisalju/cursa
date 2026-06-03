@@ -6,6 +6,7 @@ import Footer from "./footer";
 import PageTransition from "@/components/page-transition";
 import LayoutProvider from "@/components/layout-provider";
 import { Geist } from "next/font/google";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const aileron = localFont({
   variable: "--font-aileron",
@@ -137,13 +138,15 @@ export default function RootLayout({
       <body
         className={`${aileron.variable} ${geist.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} antialiased`}
       >
-        <div className="flex flex-col lg:flex-row h-screen">
-          <LayoutProvider>
-            <Header />
-            <PageTransition>{children}</PageTransition>
-          </LayoutProvider>
-          <Footer />
-        </div>
+        <TooltipProvider>
+          <div className="flex flex-col lg:flex-row h-screen">
+            <LayoutProvider>
+              <Header />
+              <PageTransition>{children}</PageTransition>
+            </LayoutProvider>
+            <Footer />
+          </div>
+        </TooltipProvider>
       </body>
     </html>
   );

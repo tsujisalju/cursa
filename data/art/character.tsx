@@ -2,6 +2,10 @@ import LongingEmblem from "@/components/logo/longing-emblem";
 import NostalgiaEmblem from "@/components/logo/nostalgia-emblem";
 import { ReactNode } from "react";
 
+export function getCharacter(id: string) {
+  return characters.find((ch) => ch.id == id);
+}
+
 export type characterID =
   | "cooper"
   | "van"
@@ -19,6 +23,7 @@ export interface Character {
   species: string;
   occupation: string;
   shortDesc: string;
+  icon?: string;
   design?: string;
   emblem?: ReactNode;
   class_position?: string;
@@ -37,6 +42,7 @@ export const characters: Character[] = [
     occupation: "Archivist/Shrine Guardian",
     shortDesc:
       "A once revered shrine keeper stripped from her timeline into modern day Japan, Tsubaki recollects the traces of her past and discovers the fleeting joys of an ordinary life.",
+    icon: "/personal/tsubaki-2026-icon.webp",
     design: "/personal/tsubaki-2026.webp",
     emblem: <NostalgiaEmblem className="h-8 w-auto" />,
     class_bg: "bg-gradient-to-b from-transparent to-fuchsia-900/50",
@@ -52,6 +58,7 @@ export const characters: Character[] = [
     occupation: "Merchant",
     shortDesc:
       "Scorned by choices she could not make, Van's sorrow transforms into purpose as fate grants her the miracle of motherhood.",
+    icon: "/personal/van-2026-icon.webp",
     design: "/personal/van-2026-2/van-2026-2.webp",
     emblem: <LongingEmblem className="h-8 w-auto" />,
     class_position: "-top-[20%] -left-[70%]",

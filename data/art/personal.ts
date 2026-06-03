@@ -15,6 +15,17 @@ export interface ArtPiece {
 
 export const artPieces: ArtPiece[] = [
   {
+    id: "pyros",
+    title: "Pyros",
+    date: "2026-06-01",
+    characters: [],
+    type: "fanart",
+    description:
+      "Fanart of Duet Night Abyss characters, From right to left: Hellfire, Camilla, Lynn, and Margie at the bottom, they stand imposingly and looking downwards on the viewer",
+    image: "/personal/pyros/pyro.webp",
+    orientation: "square",
+  },
+  {
     id: "solare",
     title: "Solare",
     date: "2026-04-17",

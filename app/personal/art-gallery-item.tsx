@@ -1,4 +1,5 @@
 "use client";
+import TransitionLink from "@/components/transition-link";
 import { ArtPiece } from "@/data/art/personal";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,9 +19,10 @@ export default function ArtGalleryItem({
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const date = new Date(art.date);
   return (
-    <Link
-      href={`#`}
+    <TransitionLink
+      href={`/personal/${art.id}`}
       className={className}
+      variant="zoom-in"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -45,6 +47,6 @@ export default function ArtGalleryItem({
           <p className="font-sans text-sm">{date.toLocaleDateString()}</p>
         </div>
       </Tilt>
-    </Link>
+    </TransitionLink>
   );
 }

@@ -1,8 +1,8 @@
 import { Badge } from "@/components/ui/badge";
-import { commercialWorks } from "@/data/art/commercial";
 import { notFound } from "next/navigation";
-import CommercialCarousel from "./commercial-carousel";
 import TransitionLink from "@/components/transition-link";
+import CommercialCarousel from "./commercial-carousel";
+import { commercialWorks } from "@/data/art/commercial";
 
 export function generateStaticParams() {
   return commercialWorks.map((work) => ({ slug: work.id }));
