@@ -1,54 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "react-photo-view/dist/react-photo-view.css";
 import Header from "./header";
 import Footer from "./footer";
 import PageTransition from "@/components/page-transition";
 import LayoutProvider from "@/components/layout-provider";
-import { Geist } from "next/font/google";
+import { Geist, Geist_Mono, Redacted_Script } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const aileron = localFont({
-  variable: "--font-aileron",
-  src: [
-    {
-      path: "./fonts/aileron/Aileron-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/aileron/Aileron-Bold.otf",
-      weight: "700",
-      style: "bold",
-    },
-    {
-      path: "./fonts/aileron/Aileron-Black.otf",
-      weight: "900",
-      style: "black",
-    },
-    {
-      path: "./fonts/aileron/Aileron-Italic.otf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "./fonts/aileron/Aileron-BoldItalic.otf",
-      weight: "700",
-      style: "italic",
-    },
-    {
-      path: "./fonts/aileron/Aileron-UltraLight.otf",
-      weight: "300",
-      style: "light",
-    },
-    {
-      path: "./fonts/aileron/Aileron-UltraLightItalic.otf",
-      weight: "300",
-      style: "italic",
-    },
-  ],
-});
 
 const nyght = localFont({
   variable: "--font-nyght",
@@ -124,6 +84,17 @@ const geist = Geist({
   variable: "--font-geist",
 });
 
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const redacted = Redacted_Script({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-redacted",
+});
+
 export const metadata: Metadata = {
   title: "Tsujisalju",
   description: "Freelance Developer and Designer",
@@ -137,7 +108,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aileron.variable} ${geist.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} antialiased`}
+        className={`${geist.variable} ${geistMono.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} ${redacted.variable} antialiased`}
       >
         <TooltipProvider>
           <div className="flex flex-col lg:flex-row h-screen">

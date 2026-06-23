@@ -12,7 +12,7 @@ export default function Almanac() {
         description="Get to know the characters who drive my narrative. Born from the hidden corners of our emotions."
       />
       <HorizontalScrollContainer
-        className={"flex flex-row grow space-x-1 overflow-x-auto"}
+        className={"flex flex-row grow space-x-1 overflow-x-scroll"}
       >
         {characters.map((character, index) => (
           <CharacterItem key={character.id} character={character} />

@@ -45,6 +45,7 @@ export const characters: Character[] = [
     icon: "/personal/tsubaki-2026-icon.webp",
     design: "/personal/tsubaki-2026.webp",
     emblem: <NostalgiaEmblem className="h-8 w-auto" />,
+    class_position: "-top-[7%] -left-[50%]",
     class_bg: "bg-gradient-to-b from-transparent to-fuchsia-900/50",
     class_font: "font-nyght font-extrabold",
     artworks: [],
@@ -61,7 +62,7 @@ export const characters: Character[] = [
     icon: "/personal/van-2026-icon.webp",
     design: "/personal/van-2026-2/van-2026-2.webp",
     emblem: <LongingEmblem className="h-8 w-auto" />,
-    class_position: "-top-[20%] -left-[70%]",
+    class_position: "-top-[15%] -left-[80%]",
     class_bg:
       "bg-gradient-to-b from-transparent via-cyan-800/50 to-yellow-800/50",
     class_font: "font-isenheim",
@@ -76,7 +77,9 @@ export const characters: Character[] = [
     occupation: "Engineer",
     shortDesc:
       "What was once a dream come true now became his greatest regret, Cooper Baihaqi is willing to risk his very existence to return to his past.",
-    design: undefined,
+    icon: "/personal/cooper-2026/cooper-2026-icon.webp",
+    design: "/personal/cooper-2026/cooper-2026.webp",
+    class_position: "-top-[15%] -left-[45%] scale-130",
     class_bg: "bg-gradient-to-b from-transparent via-zinc-800/50 to-red-900/50",
     class_font: "font-display font-bold",
     artworks: [],

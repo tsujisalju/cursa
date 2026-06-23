@@ -76,9 +76,11 @@ export default function TransitionLink({
     });
   };
 
-  return (
+  return href ? (
     <Link href={href} onClick={handleClick} {...props}>
       {children}
     </Link>
+  ) : (
+    <div className={props.className}>{children}</div>
   );
 }

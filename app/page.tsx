@@ -1,5 +1,6 @@
 "use client";
 
+import CircularProgressTimer from "@/components/circular-progress-timer";
 import { Badge } from "@/components/ui/badge";
 import { homeGallery } from "@/data/home-gallery";
 import Image from "next/image";
@@ -54,12 +55,12 @@ export default function Home() {
           </Badge>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-1.5 mix-blend-difference">
-        <div
+      <div className="absolute bottom-0 right-0 m-4 mix-blend-difference">
+        <CircularProgressTimer
           key={currentIndex}
-          className="h-full bg-white animate-[progress]"
-          style={{ animation: `progress ${duration}ms linear forwards` }}
-        ></div>
+          duration={duration / 1000}
+          strokeWidth={2}
+        />
       </div>
       <div
         className={`absolute top-0 left-0 w-full h-full ${homeGallery[currentIndex].wipeColor} transition ease-out

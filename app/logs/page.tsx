@@ -2,6 +2,8 @@
 
 import SectionHero from "@/components/section-hero";
 import SectionLayout from "@/components/section-layout";
+import LogItem from "./log-item";
+import LogList from "./log-list";
 
 export default function Almanac() {
   return (
@@ -10,7 +12,7 @@ export default function Almanac() {
         header="Logs"
         description="Reports, recollections, and reflections. Dive into the narrative threads that weave through my journey."
       />
-      <div className="flex flex-row grow space-x-4">Coming soon :3</div>
+      <LogList />
     </SectionLayout>
   );
 }

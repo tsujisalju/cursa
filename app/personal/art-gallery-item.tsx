@@ -38,6 +38,7 @@ export default function ArtGalleryItem({
           alt={art.description ?? "An artwork"}
           className={`object-cover transition duration-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}
           fill
+          sizes="(max-width: 768px) 100vw, 33vw"
           onLoad={() => setIsLoaded(true)}
         />
         <div

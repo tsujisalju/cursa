@@ -8,8 +8,10 @@ import {
 } from "@/components/ui/tooltip";
 import { getCharacter } from "@/data/art/character";
 import { artPieces } from "@/data/art/personal";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
+import StoryContent from "./story-content";
+import ImageView from "./image-view";
 
 export function generateStaticParams() {
   return artPieces.map((art) => ({ slug: art.id }));
@@ -30,17 +32,16 @@ export default async function ArtSlugPage({
     year: "numeric",
   });
 
+  const Story = art.story
+    ? dynamic(() => import(`@/content/art/${art.story}.mdx`))
+    : null;
+
   return (
-    <div className="w-full flex flex-col lg:flex-row">
+    <div className="relative lg:static w-full flex flex-col lg:flex-row overflow-clip">
       <div className="w-full h-full flex items-center lg:col-span-2 justify-center p-8 relative">
-        <Image
-          src={art.image}
-          alt={art.description ?? "drawing"}
-          className="object-contain lg:py-8"
-          fill
-        />
+        <ImageView art={art} />
       </div>
-      <div className="w-full lg:w-200 h-full flex flex-col space-y-4 p-8">
+      <div className="w-full lg:w-200 h-full flex flex-col space-y-4 p-8 overflow-y-auto">
         <TransitionLink
           className="flex flex-row space-x-2"
           href="/personal"
@@ -88,6 +89,9 @@ export default async function ArtSlugPage({
               </div>
             </div>
           )}
+          <hr />
+          {!art.story && <p className="font-sans">{art.description}</p>}
+          {art.story && <StoryContent story={art.story} />}
         </div>
       </div>
     </div>
