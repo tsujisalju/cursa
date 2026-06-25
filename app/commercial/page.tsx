@@ -9,7 +9,7 @@ export default function Commercial() {
     <SectionLayout>
       <SectionHero
         header="Commercial"
-        description="From individuals, startups to global teams, traces of my art travel along in their separate journeys."
+        description="From individuals, startups to global teams, traces of my work travel along in their separate journeys."
       />
       <HorizontalScrollContainer className="flex flex-row grow space-x-1 overflow-x-auto py-8">
         {commercialWorks.map((work, index) => (

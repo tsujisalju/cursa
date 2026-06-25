@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import TransitionLink from "@/components/transition-link";
 import CommercialCarousel from "./commercial-carousel";
 import { commercialWorks } from "@/data/art/commercial";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { GitBranch, Globe } from "lucide-react";
 
 export function generateStaticParams() {
   return commercialWorks.map((work) => ({ slug: work.id }));
@@ -85,6 +88,22 @@ export default async function CommercialSlugPage({
             </li>
           ))}
         </ul>
+        <div className="flex flex-row space-x-2">
+          {work.link && (
+            <Button asChild>
+              <Link className="w-max" href={work.link} target="_blank">
+                {work.linkIcon ?? <Globe />} {work.linkLabel ?? "Visit"}
+              </Link>
+            </Button>
+          )}
+          {work.github && (
+            <Button asChild>
+              <Link className="w-max" href={work.github} target="_blank">
+                <GitBranch /> Github
+              </Link>
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

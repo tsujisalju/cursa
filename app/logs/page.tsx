@@ -10,7 +10,7 @@ export default function Almanac() {
     <SectionLayout>
       <SectionHero
         header="Logs"
-        description="Reports, recollections, and reflections. Dive into the narrative threads that weave through my journey."
+        description="Reports, recollections, and reflections. Signals received from another realm not so different than ours."
       />
       <LogList />
     </SectionLayout>

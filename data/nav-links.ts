@@ -1,8 +1,9 @@
 export const navLinks = [
   { label: "Home", href: "/", index: 0 },
-  { label: "Commercial", href: "/commercial", index: 1 },
-  { label: "Personal", href: "/personal", index: 2 },
-  { label: "Almanac", href: "/almanac", index: 3 },
+  { label: "Resume", href: "/resume", index: 1 },
+  { label: "Commercial", href: "/commercial", index: 2 },
+  { label: "Personal", href: "/personal", index: 3 },
+  { label: "Almanac", href: "/almanac", index: 4 },
 ];
 
 // Helper function to get page index by href

@@ -17,7 +17,7 @@ export default function CharacterItem({ character }: { character: Character }) {
     >
       {character.design ? (
         <div
-          className={`absolute ${character.class_position ?? "-top-[10%] -left-[50%]"} h-375 w-250 pointer-events-none transition duration-400 ease-bounce-out ${isHovered ? "z-50 translate-x-5 mix-blend-normal" : "translate-x-0 mix-blend-overlay"}`}
+          className={`absolute ${character.class_position ?? "top-[-10%] left-[-50%]"} h-375 w-250 pointer-events-none transition duration-400 ease-bounce-out ${isHovered ? "z-50 translate-x-5 mix-blend-normal" : "translate-x-0 mix-blend-overlay"}`}
         >
           <Image
             src={character.design}
@@ -28,14 +28,14 @@ export default function CharacterItem({ character }: { character: Character }) {
           />
         </div>
       ) : (
-        <div className="absolute top-1/2 -left-[10%] w-[120%] h-max bg-primary/10 -rotate-5 text-center py-4">
+        <div className="absolute top-1/2 left-[-10%] w-[120%] h-max bg-primary/10 -rotate-5 text-center py-4">
           <span className="font-display text-xl">Coming Soon!</span>
         </div>
       )}
       <div className="flex flex-row space-x-2 justify-center items-center w-max [writing-mode:vertical-lr]">
         {character.emblem}
         <h3
-          className={`${character.class_font ?? "font-display font-bold"} text-5xl uppercase`}
+          className={`${character.class_font ?? "font-display font-bold"} text-5xl uppercase box-content m-0`}
         >
           {character.name}
         </h3>

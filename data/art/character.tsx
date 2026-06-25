@@ -1,5 +1,6 @@
 import LongingEmblem from "@/components/logo/longing-emblem";
 import NostalgiaEmblem from "@/components/logo/nostalgia-emblem";
+import SacrificeEmblem from "@/components/logo/sacrifice-emblem";
 import { ReactNode } from "react";
 
 export function getCharacter(id: string) {
@@ -79,6 +80,7 @@ export const characters: Character[] = [
       "What was once a dream come true now became his greatest regret, Cooper Baihaqi is willing to risk his very existence to return to his past.",
     icon: "/personal/cooper-2026/cooper-2026-icon.webp",
     design: "/personal/cooper-2026/cooper-2026.webp",
+    emblem: <SacrificeEmblem className="h-8 w-auto" />,
     class_position: "-top-[15%] -left-[45%] scale-130",
     class_bg: "bg-gradient-to-b from-transparent via-zinc-800/50 to-red-900/50",
     class_font: "font-display font-bold",

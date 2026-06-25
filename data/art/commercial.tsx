@@ -2,7 +2,9 @@ import MacNManaLogo from "@/public/commercial/mac-n-mana/mac-n-mana-logo";
 import MinswapLogo from "@/public/commercial/minswap/minswap-logo";
 import PurritoGeneralLogo from "@/public/commercial/purritogeneral/purrito-general-logo";
 import SteelSwapLogo from "@/public/commercial/steelswap/steelswap-logo";
+import BECPLogo from "@/public/commercial/becp/becp-logo";
 import { ReactNode } from "react";
+import { Globe } from "lucide-react";
 
 export interface CommercialWork {
   id: string;
@@ -13,6 +15,9 @@ export interface CommercialWork {
   skills: string[];
   description: string;
   link: string;
+  linkIcon?: ReactNode;
+  linkLabel?: string;
+  github?: string;
   testimonial?: string;
   testimonialAuthor?: string;
   deliverables: string[];
@@ -21,6 +26,38 @@ export interface CommercialWork {
 }
 
 export const commercialWorks: CommercialWork[] = [
+  {
+    id: "becp",
+    client: "Final Year Project",
+    project: "Blockchain Extracurricular Credentials Platform",
+    startDate: "2026-03-07",
+    endDate: "Present",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Optimism",
+      "Neon Postgres",
+    ],
+    description:
+      "A blockchain-based platform for issuing, owning, and verifying credentials for university extracurricular activities. Built on Optimism (OP Stack), with NFT-based micro-credentials, an AI-powered skill inferencing engine, and a gamified student skill development dashboard.",
+    link: "https://becp.vercel.app",
+    github: "https://github.com/tsujisalju/becp",
+    testimonial: undefined,
+    testimonialAuthor: undefined,
+    deliverables: [
+      "BECP smart contract deployed on OP Sepolia",
+      "Next.js frontend dashboard with 4 stakeholders portals",
+    ],
+    logo: <BECPLogo className="w-max" />,
+    images: [
+      "/commercial/becp/mockup-student.webp",
+      "/commercial/becp/screenshot-1.webp",
+      "/commercial/becp/screenshot-2.webp",
+      "/commercial/becp/screenshot-3.webp",
+      "/commercial/becp/screenshot-4.webp",
+    ],
+  },
   {
     id: "mac-n-mana",
     client: "Mac n' Mana",
@@ -31,6 +68,9 @@ export const commercialWorks: CommercialWork[] = [
     description:
       "Mac n’ Mana is a decentralized restaurant review platform aiming to empower diners and foodies by enabling them to search for restaurants, submit reviews, and vote on others’ feedback while earning reputation on-chain.",
     link: "https://mac-n-mana.vercel.app",
+    linkIcon: <Globe />,
+    linkLabel: "Visit",
+    github: "https://github.com/tsujisalju/mac-n-mana",
     testimonial: undefined,
     testimonialAuthor: undefined,
     deliverables: ["Dapp Prototype", "Frontend"],
@@ -57,6 +97,8 @@ export const commercialWorks: CommercialWork[] = [
     description:
       "A brand revamp for PurritoGeneral, Co-founder of Noodles Finance on Sui, Advisory for Minswap DEX on Cardano. Featuring a new mascot design and a slew of brand assets with a unique twist of cats, anime and military.",
     link: "https://x.com/purritogeneral",
+    linkIcon: undefined,
+    linkLabel: "Twitter",
     testimonial:
       "this all is super solid, im so excited to release it and evolve my character, thanks so much 🙂",
     testimonialAuthor: "Purrito General",

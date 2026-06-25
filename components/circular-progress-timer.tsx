@@ -69,7 +69,9 @@ export default function CircularProgressTimer({
           }}
         />
       </svg>
-      <div className="absolute font-sans font-light text-xs">{timeLeft}</div>
+      <div className="absolute font-sans font-light text-xs text-white">
+        {timeLeft}
+      </div>
     </div>
   );
 }
