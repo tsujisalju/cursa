@@ -49,7 +49,7 @@ export const commercialWorks: CommercialWork[] = [
       "BECP smart contract deployed on OP Sepolia",
       "Next.js frontend dashboard with 4 stakeholders portals",
     ],
-    logo: <BECPLogo className="w-max" />,
+    logo: <BECPLogo />,
     images: [
       "/commercial/becp/mockup-student.webp",
       "/commercial/becp/screenshot-1.webp",

@@ -75,7 +75,7 @@ export const resume: Resume = {
       description: [
         "Vice Academic Committee in Student Representative Council",
         "Completed A-Levels in Mathematics, Physics, Chemistry, Mechanics and German Language",
-        "Completed pre-practical courses on welding, turning and CNC machinery",
+        "Completed pre-practical engineering courses on welding, turning and CNC machinery",
       ],
     },
   ],
@@ -167,7 +167,7 @@ export const resume: Resume = {
     "Krita",
     "Adobe After Effects",
     "Microsoft Azure",
-    "Amazone Web Services",
+    "Amazon Web Services",
   ],
   interests: [
     "Maintaining a Nextcloud home server running on a Raspberry Pi 5 and Ubuntu Server",

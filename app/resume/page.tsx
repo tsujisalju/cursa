@@ -70,8 +70,8 @@ export default function Resume() {
         header="Resume"
         description="Dear Sir / Madam, to whom it may concern..."
       />
-      <HorizontalScrollContainer className="flex flex-row grow overflow-x-auto overflow-y-hidden py-8">
-        <div className="flex flex-col px-4 h-full min-w-sm gap-4 border-l">
+      <HorizontalScrollContainer className="flex flex-row grow overflow-x-auto overflow-y-clip py-8">
+        <div className="flex flex-col px-4 h-full min-w-sm gap-4 border-l overflow-y-auto">
           <ProfilePhoto />
           <div className="space-y-2">
             <h1 className="font-display font-bold text-3xl">{resume.name}</h1>
@@ -106,7 +106,7 @@ export default function Resume() {
             <Experience key={"dev" + index} exp={dev} />
           ))}
         </div>
-        <div className="flex flex-col px-4 h-full min-w-sm gap-4 border-l ">
+        <div className="flex flex-col px-4 h-full min-w-sm gap-4 border-l overflow-y-auto">
           <h2 className="font-display font-bold text-3xl">
             Entrepreneurial Experience
           </h2>
@@ -114,7 +114,7 @@ export default function Resume() {
             <Experience key={"ent" + index} exp={ent} />
           ))}
         </div>
-        <div className="flex flex-col px-4 h-full min-w-sm space-y-4 border-l ">
+        <div className="flex flex-col px-4 h-full min-w-sm space-y-4 border-l overflow-y-auto">
           <h2 className="font-display font-bold text-3xl">Skills</h2>
           <div className="flex flex-wrap gap-2">
             {resume.skills.map((skill) => (

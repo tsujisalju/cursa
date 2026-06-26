@@ -26,8 +26,8 @@ export default function CommercialItem({ work }: { work: CommercialWork }) {
           onLoad={() => setIsLoaded(true)}
         />
         <div className="absolute w-full h-40 bg-linear-to-t from-black/80 to-black/0"></div>
-        <div className="relative text-zinc-50 dark:text-zinc-50 w-49 parallax-tilt-inner mb-16">
-          <span className="shadow-lg">{work.logo}</span>
+        <div className="relative text-zinc-50 dark:text-zinc-50 parallax-tilt-inner mb-16">
+          {work.logo}
         </div>
       </Tilt>
     </TransitionLink>
