@@ -81,13 +81,6 @@ export const resume: Resume = {
   ],
   developer: [
     {
-      role: "Blockchain Consultant",
-      company: "MIMOS Berhad",
-      startDate: "2026-07-01",
-      endDate: "Present",
-      description: [],
-    },
-    {
       role: "Frontend Engineer Intern for Digital Cloud",
       company: "Telekom Research and Development",
       startDate: "2025-05-01",
