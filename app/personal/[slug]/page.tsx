@@ -90,7 +90,8 @@ export default async function ArtSlugPage({
             </div>
           )}
           <hr />
-          {!art.story && <p className="font-sans">{art.description}</p>}
+          {art.description && <p className="font-sans">{art.description}</p>}
+          <hr />
           {art.story && <StoryContent story={art.story} />}
         </div>
       </div>

@@ -81,12 +81,19 @@ export const resume: Resume = {
   ],
   developer: [
     {
+      role: "Blockchain Consultant",
+      company: "MIMOS Berhad",
+      startDate: "2026-07-01",
+      endDate: "Present",
+      description: [],
+    },
+    {
       role: "Frontend Engineer Intern for Digital Cloud",
-      company: "TM Research and Development",
+      company: "Telekom Research and Development",
       startDate: "2025-05-01",
       endDate: "2025-09-01",
       description: [
-        "Led the maintenance of the integrated OSHE management system at TM built on Angular and NestJS, delivering timely improvements and enhancements from priority feedback",
+        "Led the maintenance of the integrated OSHE management system at Telekom Malaysia built on Angular and NestJS, delivering timely improvements and enhancements from priority feedback",
         "Deeply involved in the migration of frontend technologies for several platforms to their latest versions",
         "Taking independent initiative to refactor internal systems to follow best practices and improve maintainability",
       ],

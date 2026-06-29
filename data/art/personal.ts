@@ -22,6 +22,7 @@ export const artPieces: ArtPiece[] = [
     type: "illustration",
     description:
       "An artwork featuring Cooper Baihaqi the sand cat, two versions of him as the present adult and his child past sitting opposite and facing away from each other, the adult slouches with his left arm appeared to be fused with an angelic and mechanical symbiote, spreading its large, broken wing. Feathers scatter in the air, the child looks upwards in bliss, reaching out to them.",
+    story: "theseus",
     image: "/personal/theseus/theseus.webp",
     orientation: "portrait",
   },
@@ -33,6 +34,7 @@ export const artPieces: ArtPiece[] = [
     type: "fanart",
     description:
       "Fanart of Duet Night Abyss characters, From right to left: Hellfire, Camilla, Lynn, and Margie at the bottom, they stand imposingly and looking downwards on the viewer",
+    story: "pyros",
     image: "/personal/pyros/pyro.webp",
     orientation: "square",
   },
