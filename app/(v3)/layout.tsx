@@ -5,8 +5,10 @@ import { Geist, Geist_Mono, Redacted_Script } from "next/font/google";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
-import TsujisaljuLogoV3 from "@/components/logo/tsujisalju-logo-v3";
-import { Frame } from "@/components/frame";
+import { Frame } from "@/app/(v3)/frame";
+import Sidebar from "./sidebar";
+import { SketchBackdrop } from "./sketch-backdrop";
+import { sketches } from "@/data/sketches";
 
 const nyght = localFont({
   variable: "--font-nyght",
@@ -98,17 +100,18 @@ export const metadata: Metadata = {
   description: "Freelance Developer and Designer",
 };
 
-export default function v3Layout({
+export default function V3Layout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body
-        className={`overflow-clip-x bg-bg font-mono text-fg ${geist.variable} ${geistMono.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} ${redacted.variable} antialiased`}
+        className={`overflow-x-clip bg-bg font-mono text-fg ${geist.variable} ${geistMono.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} ${redacted.variable} antialiased`}
       >
         <TooltipProvider>
-          <Frame />
-          <div className="relative z-10 mx-auto min-h-screen max-w-300 bg-bg pt-(--band-t) pb-(--band-b) lg:pl-60">
+          <SketchBackdrop sketches={sketches} />
+          <Frame rail={<Sidebar />} />
+          <div className="relative z-10 mx-auto min-h-dvh max-w-(--shell-w) pt-(--band-t) pb-(--band-b) pl-(--rail-w)">
             {children}
           </div>
         </TooltipProvider>

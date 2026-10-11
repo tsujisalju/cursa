@@ -22,18 +22,19 @@
 }
 
 :root {
+    --shell-w: 75rem; /* 1200px */
+    --rail-w: 0px; /* no rail below lg */
     --band-t: 1rem;
     --band-b: 1rem;
+    --sketch-opacity: 0.14;
+}
+@media (min-width: 64rem) {
+    /* = Tailwind lg */
+    :root {
+        --rail-w: 15rem;
+    }
 }
 
 html {
     scroll-padding-top: var(--band-t);
-}
-
-.bg-hatch {
-    background-image: repeating-linear-gradient(
-        135deg,
-        var(--color-line) 0 1px,
-        transparent 1px 6px
-    );
 }

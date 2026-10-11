@@ -1,3 +1,5 @@
+"use client";
+
 export default function Sidebar() {
-  return <aside></aside>;
+  return <aside>rail</aside>;
 }
