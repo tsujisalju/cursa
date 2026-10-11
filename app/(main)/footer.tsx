@@ -1,5 +1,5 @@
+import TsujisaljuLogo from "@/components/logo/tsujisalju-logo";
 import Link from "next/link";
-import TsujisaljuLogo from "../components/logo/tsujisalju-logo";
 
 export default function Footer() {
   return (

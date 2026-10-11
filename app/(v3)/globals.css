@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bg: var(--color-mauve-950);
+    --color-panel: var(--color-mauve-900);
+    --color-fg: var(--color-mauve-200);
+    --color-muted: var(--color-mauve-500);
+    --color-line: rgb(255 255 255 / 0.04);
+    --color-line-strong: rgb(255 255 255 / 0.16);
+    --color-accent: var(--color-teal-800);
+}
+
+@theme inline {
+    --font-sans: var(--font-geist);
+    --font-serif: var(--font-nyght);
+    --font-mono: var(--font-geist-mono);
+    --font-display: var(--font-flareserif);
+    --font-nyght: var(--font-nyght);
+    --font-isenheim: var(--font-isenheim);
+    --font-pilowlava: var(--font-pilowlava);
+    --font-redacted: var(--font-redacted);
+}
+
+:root {
+    --band-t: 1rem;
+    --band-b: 1rem;
+}
+
+html {
+    scroll-padding-top: var(--band-t);
+}
+
+.bg-hatch {
+    background-image: repeating-linear-gradient(
+        135deg,
+        var(--color-line) 0 1px,
+        transparent 1px 6px
+    );
+}

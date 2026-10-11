@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 import "react-photo-view/dist/react-photo-view.css";
 import Header from "./header";
 import Footer from "./footer";
@@ -14,22 +14,22 @@ const nyght = localFont({
   variable: "--font-nyght",
   src: [
     {
-      path: "./fonts/nyght/NyghtSerif-Light.otf",
+      path: "../fonts/nyght/NyghtSerif-Light.otf",
       weight: "300",
       style: "light",
     },
     {
-      path: "./fonts/nyght/NyghtSerif-Regular.otf",
+      path: "../fonts/nyght/NyghtSerif-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/nyght/NyghtSerif-Bold.otf",
+      path: "../fonts/nyght/NyghtSerif-Bold.otf",
       weight: "700",
       style: "bold",
     },
     {
-      path: "./fonts/nyght/NyghtSerif-Dark.otf",
+      path: "../fonts/nyght/NyghtSerif-Dark.otf",
       weight: "800",
       style: "extrabold",
     },
@@ -40,12 +40,12 @@ const isenheim = localFont({
   variable: "--font-isenheim",
   src: [
     {
-      path: "./fonts/isenheim/Isenheim_Regulier.otf",
+      path: "../fonts/isenheim/Isenheim_Regulier.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/isenheim/Isenheim_Fin.otf",
+      path: "../fonts/isenheim/Isenheim_Fin.otf",
       weight: "300",
       style: "light",
     },
@@ -56,12 +56,12 @@ const flareserif = localFont({
   variable: "--font-flareserif",
   src: [
     {
-      path: "./fonts/flareserif/Flareserif-821-Regular.otf",
+      path: "../fonts/flareserif/Flareserif-821-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/flareserif/Flareserif-821-Bold.otf",
+      path: "../fonts/flareserif/Flareserif-821-Bold.otf",
       weight: "700",
       style: "bold",
     },
@@ -72,7 +72,7 @@ const pilowlava = localFont({
   variable: "--font-pilowlava",
   src: [
     {
-      path: "./fonts/Pilowlava-Regular.otf",
+      path: "../fonts/Pilowlava-Regular.otf",
       weight: "400",
       style: "normal",
     },

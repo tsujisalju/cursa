@@ -1,10 +1,10 @@
 "use client";
 
-import Navbar from "@/app/navbar";
-import { Slogan } from "@/app/slogan";
+import Navbar from "@/app/(main)/navbar";
 import TsujisaljuTextLogo from "@/components/logo/tsujisalju-textlogo";
 import TsujisaljuTextLogoOutline from "@/components/logo/tsujisalju-textlogo-outline";
 import NavLink from "@/components/nav-link";
+import { Slogan } from "./slogan";
 
 export default function Header() {
   return (
