@@ -4,10 +4,13 @@
     --color-bg: var(--color-mauve-950);
     --color-panel: var(--color-mauve-900);
     --color-fg: var(--color-mauve-200);
-    --color-muted: var(--color-mauve-500);
+    --color-muted: var(--color-mauve-400); /* body copy: 6.9:1 on panel */
+    --color-dim: var(--color-mauve-500); /* decorative labels only: 3.5:1 */
     --color-line: rgb(255 255 255 / 0.04);
     --color-line-strong: rgb(255 255 255 / 0.16);
-    --color-accent: var(--color-teal-800);
+    --color-accent: var(--color-teal-800); /* fills/borders; fg on it is 6:1 */
+    --color-accent-fg: var(--color-teal-400); /* accent as TEXT: 9.5:1 */
+    --color-accent-2: var(--color-mauve-400);
 }
 
 @theme inline {
@@ -27,6 +30,7 @@
     --band-t: 1rem;
     --band-b: 1rem;
     --sketch-opacity: 0.14;
+    --strip: 1rem; /* side strips + Spacer height */
 }
 @media (min-width: 64rem) {
     /* = Tailwind lg */
