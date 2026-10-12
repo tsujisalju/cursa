@@ -11,7 +11,7 @@ export function Kicker({
   return (
     <div
       className={cn(
-        "flex items-center gap-3 pt-5 font-serif text-sm italic text-muted",
+        "flex items-center gap-3 pt-5 font-serif text-sm italic text-copy",
         className,
       )}
     >

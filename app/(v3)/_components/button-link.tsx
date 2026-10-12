@@ -13,7 +13,7 @@ const button = cva(
     variants: {
       variant: {
         solid:
-          "border-teal-800 bg-accent text-fg hover:border-teal-700 hover:bg-teal-700",
+          "border-teal-800 bg-brand text-fg hover:border-teal-700 hover:bg-teal-700",
         outline: "border-line-strong bg-panel text-fg hover:bg-white/5",
       },
     },

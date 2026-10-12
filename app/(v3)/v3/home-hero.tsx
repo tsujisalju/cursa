@@ -14,9 +14,9 @@ export function HomeHero() {
           <div className="px-6 pb-12 pt-6 lg:px-9">
             <h1 className="max-w-[18ch] font-serif text-4xl leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]">
               Engineering systems for{" "}
-              <em className="text-accent-fg">self-sovereignty</em>
+              <em className="text-brand-fg">self-sovereignty</em>
             </h1>
-            <p className="mt-6 max-w-136 text-sm leading-7 tracking-wide text-muted">
+            <p className="mt-6 max-w-136 text-sm leading-7 tracking-wide text-copy">
               Hi, I&apos;m Qayyum, a software engineer and researcher working
               across web, blockchain and verifiable systems. Based in Kuala
               Lumpur.

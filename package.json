@@ -17,6 +17,7 @@
     "@vercel/speed-insights": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cn": "^0.4.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^1.55.0",
@@ -26,7 +27,8 @@
     "react-dom": "19.2.7",
     "react-parallax-tilt": "^1.7.346",
     "react-photo-view": "^1.2.7",
-    "tailwind-merge": "^3.7.0"
+    "tailwind-merge": "^3.7.0",
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",

@@ -35,7 +35,7 @@ export function Cell({ title, tag, tagTone, children }: CellProps) {
         <h3 className="font-serif text-xl leading-snug">{title}</h3>
         {tag && <StatusTag tone={tagTone}>{tag}</StatusTag>}
       </header>
-      <p className="max-w-lg text-sm leading-6 tracking-wide text-muted">
+      <p className="max-w-lg text-sm leading-6 tracking-wide text-copy">
         {children}
       </p>
     </article>

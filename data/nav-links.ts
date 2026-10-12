@@ -6,6 +6,14 @@ export const navLinks = [
   { label: "Almanac", href: "/almanac", index: 4 },
 ];
 
+export const navLinksV3 = [
+  ["Home", "/v3"], //temporarily set to v3
+  ["Projects", "/projects"],
+  ["Research", "/research"],
+  ["Writing", "/writing"],
+  ["About", "/about"],
+];
+
 // Helper function to get page index by href
 export function getPageIndex(href: string): number {
   const link = navLinks.find((link) => link.href.includes(href));

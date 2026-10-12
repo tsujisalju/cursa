@@ -6,8 +6,8 @@ const tag = cva(
   {
     variants: {
       tone: {
-        neutral: "border-line-strong bg-white/5 text-muted",
-        live: "border-accent bg-accent/25 text-accent-fg",
+        neutral: "border-line-strong bg-white/5 text-copy",
+        live: "border-brand bg-brand/25 text-brand-fg",
       },
     },
     defaultVariants: { tone: "neutral" },

@@ -104,9 +104,9 @@ export default function V3Layout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`overflow-x-clip bg-bg font-mono text-fg ${geist.variable} ${geistMono.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} ${redacted.variable} antialiased`}
+        className={`relative overflow-x-clip bg-bg font-mono text-fg ${geist.variable} ${geistMono.variable} ${nyght.variable} ${isenheim.variable} ${pilowlava.variable} ${flareserif.variable} ${redacted.variable} antialiased`}
       >
         <TooltipProvider>
           <SketchBackdrop sketches={sketches} />
