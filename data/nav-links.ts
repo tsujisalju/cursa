@@ -14,6 +14,14 @@ export const navLinksV3 = [
   ["About", "/about"],
 ];
 
+const HOME_V3 = navLinksV3[0][1];
+
+// Active-link rule shared by the desktop rail and the mobile drawer
+export function isActiveV3(path: string, href: string): boolean {
+  if (href === HOME_V3) return path === href;
+  return path === href || path.startsWith(`${href}/`);
+}
+
 // Helper function to get page index by href
 export function getPageIndex(href: string): number {
   const link = navLinks.find((link) => link.href.includes(href));

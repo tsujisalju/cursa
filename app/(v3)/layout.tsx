@@ -9,6 +9,7 @@ import { Frame } from "@/app/(v3)/frame";
 import Sidebar from "./sidebar";
 import { SketchBackdrop } from "./sketch-backdrop";
 import { sketches } from "@/data/sketches";
+import { MobileHeader } from "./_components/mobile-header";
 
 const nyght = localFont({
   variable: "--font-nyght",
@@ -110,7 +111,7 @@ export default function V3Layout({
       >
         <TooltipProvider>
           <SketchBackdrop sketches={sketches} />
-          <Frame rail={<Sidebar />} />
+          <Frame rail={<Sidebar />} topBar={<MobileHeader />} />
           <div className="relative z-10 mx-auto min-h-dvh max-w-(--shell-w) pt-(--band-t) pb-(--band-b) pl-(--rail-w)">
             {children}
           </div>

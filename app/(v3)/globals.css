@@ -4,10 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-.drawer-float {
-    --drawer-inset: 16px;
-}
-
 @theme {
     --color-bg: var(--color-mauve-950);
     --color-panel: var(--color-mauve-900);
@@ -74,7 +70,10 @@
 :root {
     --shell-w: 75rem; /* 1200px */
     --rail-w: 0px; /* no rail below lg */
-    --band-t: 1rem;
+    --header-h: 3.5rem; /* mobile header card */
+    --band-t: calc(
+        var(--strip) * 2 + var(--header-h)
+    ); /* mobile: strip + card + strip */
     --band-b: 1rem;
     --sketch-opacity: 0.14;
     --strip: 1rem; /* side strips + Spacer height */
@@ -116,6 +115,7 @@
     /* = Tailwind lg */
     :root {
         --rail-w: 15rem;
+        --band-t: 1rem; /* desktop: thin band, nav lives in the rail */
     }
 }
 
