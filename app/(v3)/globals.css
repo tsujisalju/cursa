@@ -121,6 +121,13 @@
 
 html {
     scroll-padding-top: var(--band-t);
+    scrollbar-gutter: stable; /* keep the scrollbar's space when a drawer locks scroll */
+}
+
+/* the gutter is already reserved, so skip react-remove-scroll's compensation */
+html body[data-scroll-locked] {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
 }
 
 .dark {
