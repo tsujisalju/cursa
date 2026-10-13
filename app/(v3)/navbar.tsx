@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const path = usePathname();
   return (
-    <div className="flex flex-row h-full space-x-4 uppercase py-2 lg:py-0 text-sm">
+    <nav className="flex flex-row h-full space-x-4 uppercase py-2 lg:py-0 text-sm">
       {navLinksV3.map(([label, href]) => {
         const active = href === "/" ? path === "/v3" : path.startsWith(href); // temporarily on /v3
         return (
@@ -20,6 +20,6 @@ export default function Navbar() {
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }

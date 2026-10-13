@@ -78,6 +78,7 @@
     --band-b: 1rem;
     --sketch-opacity: 0.14;
     --strip: 1rem; /* side strips + Spacer height */
+    --footer-h: 4rem; /* footer + sidebar bottom block, borders line up */
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0.008 326);
     --card: oklch(1 0 0);

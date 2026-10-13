@@ -11,7 +11,7 @@ export const works: Work[] = [
     tag: "Project",
     live: true,
     excerpt:
-      "AI agents can now hold financial autonomy. But a prompt does not guarantee an agent will behave within limits. Koshirae enforces limits at the protocol level using on-chain policy objects on Sui blockchain.",
+      "AI agents can now hold financial autonomy. But a prompt does not guarantee that an agent will behave within limits. Koshirae enforces those limits at the protocol level using on-chain policy objects on Sui blockchain. All actions are checked against policy. Anything exceeding the policy fails, protecting against compromised agent actions.",
   },
   {
     title: "Blockchain extracurricular credentials platform",
