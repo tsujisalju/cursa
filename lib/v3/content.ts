@@ -1,3 +1,5 @@
+import { outputs } from "@/data/v3/outputs";
+import { projects } from "@/data/v3/projects";
 import { skills } from "@/data/v3/skills";
 
 export const skillsWithEvidence = () =>

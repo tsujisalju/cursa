@@ -124,6 +124,23 @@ export const projects = [
     },
     featured: false,
   },
+  {
+    slug: "minswap",
+    title: "Minswap V1",
+    summary:
+      "Provide graphic design for marketing and merchandise, establishing brand identity through mascot illustrations, later assisting in developing the trading interface for Minswap DEX using Next.js and Tailwindcss, worked with a global team of agile individuals. >60K followers on X.",
+    kind: "client",
+    status: "shipped",
+    period: { start: "2021-05-01", end: "2024-01-01" },
+    role: "",
+    stack: ["figma", "krita"],
+    areas: [],
+    links: {
+      repo: "",
+      live: "https://minswap.org",
+    },
+    featured: false,
+  },
 ] as const satisfies readonly Project[];
 
 export type ProjectSlug = (typeof projects)[number]["slug"];

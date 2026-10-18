@@ -158,6 +158,26 @@ export const skills = [
     label: "Expo",
     group: "framework",
   },
+  {
+    id: "literature-review",
+    label: "Literature Review",
+    group: "research",
+  },
+  {
+    id: "survey",
+    label: "Survey",
+    group: "research",
+  },
+  {
+    id: "case-study",
+    label: "Case Study",
+    group: "research",
+  },
+  {
+    id: "technical-analysis",
+    label: "Technical Analysis",
+    group: "research",
+  },
 ] as const satisfies readonly Skill[];
 
 export type SkillId = (typeof skills)[number]["id"];
