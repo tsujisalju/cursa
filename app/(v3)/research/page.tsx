@@ -1,3 +1,3 @@
-export default function ProjectsPage() {
+export default function ResearchPage() {
   return <></>;
 }

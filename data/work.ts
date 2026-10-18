@@ -26,4 +26,11 @@ export const works: Work[] = [
     excerpt:
       "Personal information is constantly being overshared and scattered across online services. One small leak and your identity is compromised. Building a decentralized identity solution using W3C Verifiable Credentials and ZK proofs to enable self-custody and selective disclosure.",
   },
+  {
+    title: "Portfolio website",
+    tag: "Project",
+    live: true,
+    excerpt:
+      "I continuously update my website with my creative and commercial works with my own unique flare and presentation. Built on Next.js, working towards schema-driven content. Pivoting focus to research, while paying homage to designer legacy.",
+  },
 ];

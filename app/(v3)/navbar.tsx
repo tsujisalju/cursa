@@ -1,6 +1,6 @@
 "use client";
 
-import { navLinksV3 } from "@/data/nav-links";
+import { isActiveV3, navLinksV3 } from "@/data/nav-links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="flex flex-row h-full space-x-4 uppercase py-2 lg:py-0 text-sm">
       {navLinksV3.map(([label, href]) => {
-        const active = href === "/" ? path === "/v3" : path.startsWith(href); // temporarily on /v3
+        const active = isActiveV3(path, href);
         return (
           <Link
             key={href}

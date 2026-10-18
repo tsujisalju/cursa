@@ -31,7 +31,7 @@ export function HomeHero() {
             </div>
           </div>
         </div>
-        <div className="border-t border-line-strong p-4 lg:border-l lg:border-t-0">
+        <div className="hidden lg:block border-t border-line-strong p-4 lg:border-l lg:border-t-0">
           <Figure
             label="Fig. 01"
             caption="Sketch"
